@@ -10,7 +10,7 @@
   --font-grotesk: "Neue Haas Grotesk Display Pro", sans-serif;
 
   --color-black: #121212;
-  --color-light-grey: #F3F4F6;
+  --color-light-grey: #f3f4f6;
   --color-dark-grey: #2f2f2f;
   --color-mid-grey: #ababab;
   --color-grey: #6f6f6f;
@@ -295,3 +295,4 @@ body.menu-open {
   background-color: #fbbf24;
 }
 
+/* updated approch */

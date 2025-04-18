@@ -233,15 +233,42 @@ document.addEventListener("DOMContentLoaded", () => {
 //smooth-scroll
 const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
 
+// Configure these values to tweak the animation
+const SCROLL_DURATION = 1000; // ms
+const OFFSET = 100; // px (adjust based on your header height)
+
+// Custom easing function for smooth animation
+function easeInOutQuint(t) {
+  return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t;
+}
+
 smoothScrollLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
     const targetId = link.getAttribute("href").substring(1);
     const targetElement = document.getElementById(targetId);
 
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (!targetElement) return;
+
+    const targetPosition =
+      targetElement.getBoundingClientRect().top + window.pageYOffset;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition - OFFSET;
+    let startTime = null;
+
+    function animation(currentTime) {
+      if (!startTime) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / SCROLL_DURATION, 1);
+
+      window.scrollTo(0, startPosition + distance * easeInOutQuint(progress));
+
+      if (timeElapsed < SCROLL_DURATION) {
+        requestAnimationFrame(animation);
+      }
     }
+
+    requestAnimationFrame(animation);
   });
 });
 
@@ -271,16 +298,12 @@ function initializeApproachSection(approachSection) {
     return;
   }
 
-  // Determine slider type
-  const isSlider2 = swiperElement.classList.contains("approach-swiper");
-  const isSlider3 = swiperElement.classList.contains("newApproach-swiper");
-
   // Initialize Swiper
   const approachSwiper = new Swiper(swiperElement, {
     direction: "vertical",
     slidesPerView: 1,
     spaceBetween: 0,
-    mousewheel: false,
+    mousewheel: false, // Disable Swiper's mousewheel control
   });
 
   // GSAP ScrollTrigger setup
@@ -296,10 +319,6 @@ function initializeApproachSection(approachSection) {
     ".approach-progress-bar-fill"
   );
 
-  // Get .linos-two or .linos-three elements
-  const linosTwo = isSlider2 ? approachSection.querySelector(".linos-two") : null;
-  const linosThree = isSlider3 ? approachSection.querySelector(".linos-three") : null;
-
   // Validate required elements
   if (!currentSlideNumber || !totalSlideNumber || !progressBarFill) {
     console.error(
@@ -308,7 +327,7 @@ function initializeApproachSection(approachSection) {
     return;
   }
 
-  // Set the total slide number (e.g., "01")
+  // Set the total slide number (e.g., "05")
   totalSlideNumber.textContent = totalSlides.toString().padStart(2, "0");
 
   // Pin the section and control the Swiper slides with scroll
@@ -319,29 +338,13 @@ function initializeApproachSection(approachSection) {
     pin: true,
     pinSpacing: true,
     scrub: 1,
-    onEnter: () => {
-      // Animate when section enters viewport
-      if (isSlider2 && linosTwo) {
-        linosTwo.classList.add("is-active");
-      } else if (isSlider3 && linosThree) {
-        linosThree.classList.add("is-active");
-      }
-    },
-    onLeave: () => {
-      // Remove animation when section leaves viewport
-      if (isSlider2 && linosTwo) {
-        linosTwo.classList.remove("is-active");
-      } else if (isSlider3 && linosThree) {
-        linosThree.classList.remove("is-active");
-      }
-    },
     onUpdate: (self) => {
       // Calculate the current slide based on scroll progress
       const progress = self.progress;
       const slideIndex = Math.round(progress * (totalSlides - 1));
-      approachSwiper.slideTo(slideIndex, 0);
+      approachSwiper.slideTo(slideIndex, 0); // Instantly change slide
 
-      // Update the current slide number (e.g., "01")
+      // Update the current slide number (e.g., "01" to "05")
       currentSlideNumber.textContent = (slideIndex + 1)
         .toString()
         .padStart(2, "0");
@@ -508,4 +511,4 @@ var wow = new WOW({
 });
 wow.init();
 
-//form
+// Initialize Locomotive Scroll

@@ -259,7 +259,7 @@
             </h1>
 
             <a
-              href="#about"
+              href="#about-new"
               class="group absolute bottom-3.5 left-1/2 -translate-x-1/2 min-w-9 min-h-14.5 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white hover:text-beige transition-all duration-300 ease-in-out cursor-pointer"
               id="scroll-down"
               aria-label="Scroll down"
@@ -272,74 +272,19 @@
         </div>
       </section>
       <!-- approch start -->
-      <section
-        class="px-4 lg:px-14 relative approach lg:block hidden"
-        id="about-approch"
-      >
+      <section class="px-4 lg:px-14 relative approach lg:block hidden" id="about-new">
         <div class="swiper approach-swiper">
           <div class="swiper-wrapper">
             <!-- slider 1 -->
-            <div class="swiper-slide">
+            <div
+              class="swiper-slide wow animate__slideInRight"
+              data-wow-duration="0.3s"
+              data-wow-delay="0.3s"
+              data-wow-offset="0"
+              data-wow-iteration="1"
+            >
               <div class="">
-                <div class="absolute top-10 left-0 flex flex-col space-y-3">
-                  <div>
-                    <a
-                      href="#"
-                      class="text-2xl text-black font-medium border-b-[1px] border-black pb-4 inline-block max-w-[252px]"
-                    >
-                      Request a call today
-                    </a>
-                  </div>
-                  <h3
-                    class="max-w-[707px] text-[32px] lg:text-6xl font-light text-black"
-                  >
-                    With Us, it’s always personal
-                  </h3>
-                </div>
-                <div class="absolute left-0 top-65 w-[90%]">
-                  <div class="flex lg:flex-row justify-between relative">
-                    <button
-                      class="border-[1px] border-black rounded-full py-8 px-12 text-black font-normal italic bg-beige z-10"
-                    >
-                      Care
-                    </button>
-                  </div>
-                </div>
-                <div
-                  class="flex flex-col lg:flex-row items-center justify-between max-w-[1150px] mx-auto space-x-5 lg:space-x-[90px] mt-30"
-                >
-                  <div class="2/6">
-                    <img
-                      src="./img/approch-02.png"
-                      alt="approach"
-                      class="max-w-[360px]"
-                    />
-                  </div>
-                  <div class="4/6">
-                    <h2 class="text-[32px] lg:text-6xl font-light text-black">
-                      We form a
-                      <span
-                        class="font-quarto italic lowercase text-[40px] lg:text-[70px]"
-                        >relationship</span
-                      >
-                      with every individual we work with.
-                    </h2>
-                    <p class="text-lg font-gilroy font-normal text-black pt-7">
-                      We listen and understand your current circumstances, your
-                      background, goals and your plan for the future. We become
-                      your main point of contact in the UK during your journey
-                      and assist you with all your UK immigration applications
-                      until you obtain UK citizenship – and for as long as you
-                      need us after that.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- slider 2 -->
-            <div class="swiper-slide">
-              <div class="">
-                <div class="absolute top-10 left-0 flex flex-col space-y-3">
+                <div class="absolute top-14 left-0 flex flex-col space-y-3">
                   <div>
                     <a
                       href="#"
@@ -354,7 +299,70 @@
                     With Us, it’s always personal
                   </h3>
                 </div>
-                <div class="absolute left-0 top-65 w-[90%]">
+                <div class="absolute z-40 left-0 top-65 w-[90%]">
+                  <div class="flex lg:flex-row justify-between relative">
+                    <button
+                      class="border-[1px] border-black rounded-full py-8 px-12 text-black font-normal italic bg-beige z-10"
+                    >
+                      Care
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col lg:flex-row items-center justify-between max-w-[1150px] mx-auto space-x-5 lg:space-x-[90px] mt-30"
+                >
+                  <div class="2/6">
+                    <div
+                      class="w-[300px] h-[300px] md:w-[380px] md:h-[560px] rounded-full overflow-hidden relative mx-auto"
+                    >
+                      <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        class="w-full h-full object-cover absolute inset-0"
+                        aria-label="Promotional video"
+                      >
+                        <source src="./img/relationship.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                  <div class="4/6">
+                    <h2 class="text-[32px] lg:text-6xl font-light text-black">
+                      We pride ourselves on taking
+                      <span
+                        class="font-quarto italic lowercase text-[40px] lg:text-[70px]"
+                        >great</span
+                      >
+                      care about everyone’s journey,
+                    </h2>
+                    <p class="text-lg font-gilroy font-normal text-black pt-7">
+                      afterall, it’s personal to you and where necessary, your
+                      family. We care and look out for you like no other.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- slider 2 -->
+            <div class="swiper-slide">
+              <div class="">
+                <div class="absolute top-14 left-0 flex flex-col space-y-3">
+                  <div>
+                    <a
+                      href="#"
+                      class="text-2xl text-black font-medium border-b-[1px] border-black pb-4 inline-block"
+                    >
+                      Request a call today
+                    </a>
+                  </div>
+                  <h3
+                    class="max-w-[707px] text-[32px] lg:text-6xl font-light text-black"
+                  >
+                    With Us, it’s always personal
+                  </h3>
+                </div>
+                <div class="absolute z-40 left-0 top-65 w-[90%]">
                   <div class="flex lg:flex-row justify-between space-x-5">
                     <button
                       class="border-[1px] border-beige rounded-full text-black font-normal italic bg-beige z-10"
@@ -362,7 +370,7 @@
                       Care
                     </button>
                     <div
-                      class="hidden lg:block w-full h-[1px] bg-black my-auto"
+                      class="hidden lg:block w-full h-[1px] bg-black my-auto "
                     ></div>
                     <button
                       class="border-[1px] border-black rounded-full py-8 px-12 text-black font-normal italic bg-beige z-10"
@@ -381,11 +389,23 @@
                   class="flex flex-col lg:flex-row items-center justify-between max-w-[1150px] mx-auto space-x-5 lg:space-x-[90px] mt-30"
                 >
                   <div class="2/6">
-                    <img
-                      src="./img/approch-01.png"
-                      alt="approach"
-                      class="max-w-[360px]"
-                    />
+                    <div
+                      class="w-[300px] h-[300px] md:w-[380px] md:h-[560px] rounded-full overflow-hidden relative mx-auto"
+                    >
+                      <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        class="w-full h-full object-cover absolute inset-0"
+                        aria-label="Promotional video"
+                      >
+                        <source
+                          src="./img/relationship-2.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
                   </div>
                   <div class="4/6">
                     <h2 class="text-[32px] lg:text-6xl font-light text-black">
@@ -411,7 +431,7 @@
             <!-- slider 3 -->
             <div class="swiper-slide">
               <div class="">
-                <div class="absolute top-10 left-0 flex flex-col space-y-3">
+                <div class="absolute top-14 left-0 flex flex-col space-y-3">
                   <div>
                     <a
                       href="#"
@@ -426,7 +446,7 @@
                     With Us, it’s always personal
                   </h3>
                 </div>
-                <div class="absolute left-0 top-65 w-[90%]">
+                <div class="absolute z-40 left-0 top-65 w-[90%]">
                   <div class="flex lg:flex-row justify-between space-x-5">
                     <button
                       class="border-[1px] border-beige rounded-full text-black font-normal italic bg-beige z-10"
@@ -455,20 +475,29 @@
                   class="flex flex-col lg:flex-row items-center justify-between max-w-[1150px] mx-auto space-x-5 lg:space-x-[90px] mt-30"
                 >
                   <div class="2/6">
-                    <img
-                      src="./img/approch-03.png"
-                      alt="approach"
-                      class="max-w-[360px]"
-                    />
+                    <div
+                      class="w-[300px] h-[300px] md:w-[380px] md:h-[560px] rounded-full overflow-hidden relative mx-auto"
+                    >
+                      <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        class="w-full h-full object-cover absolute inset-0"
+                        aria-label="Promotional video"
+                      >
+                        <source src="./img/care.mp4" type="video/mp4" />
+                      </video>
+                    </div>
                   </div>
                   <div class="4/6">
                     <h2 class="text-[32px] lg:text-6xl font-light text-black">
-                      We form a
+                      We are
                       <span
                         class="font-quarto italic lowercase text-[40px] lg:text-[70px]"
-                        >relationship</span
+                        >committed</span
                       >
-                      with every individual we work with.
+                      to each individual and act in your best interest.
                     </h2>
                     <p class="text-lg font-gilroy font-normal text-black pt-7">
                       We listen and understand your current circumstances, your
@@ -541,7 +570,20 @@
                   class="flex flex-row items-center justify-between space-x-4"
                 >
                   <div class="w-1/2">
-                    <img src="./img/approch-02.png" alt="approach" class="" />
+                   <div
+                      class="w-[170px] h-[250px] md:w-[380px] md:h-[560px] rounded-full overflow-hidden relative mx-auto"
+                    >
+                      <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        class="w-full h-full object-cover absolute inset-0"
+                        aria-label="Promotional video"
+                      >
+                        <source src="./img/relationship.mp4" type="video/mp4" />
+                      </video>
+                    </div>
                   </div>
                   <div class="w-1/2">
                     <p class="text-lg font-gilroy font-normal text-black pt-7">
@@ -604,7 +646,20 @@
                   class="flex flex-row items-center justify-between space-x-4"
                 >
                   <div class="w-1/2">
-                    <img src="./img/approch-01.png" alt="approach" class="" />
+                   <div
+                      class="w-[170px] h-[250px] md:w-[380px] md:h-[560px] rounded-full overflow-hidden relative mx-auto"
+                    >
+                      <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        class="w-full h-full object-cover absolute inset-0"
+                        aria-label="Promotional video"
+                      >
+                        <source src="./img/relationship-2.mp4" type="video/mp4" />
+                      </video>
+                    </div>
                   </div>
                   <div class="w-1/2">
                     <p class="text-lg font-gilroy font-normal text-black pt-7">
@@ -667,7 +722,20 @@
                   class="flex flex-row items-center justify-between space-x-4"
                 >
                   <div class="w-1/2">
-                    <img src="./img/approch-03.png" alt="approach" class="" />
+                   <div
+                      class="w-[170px] h-[250px] md:w-[380px] md:h-[560px] rounded-full overflow-hidden relative mx-auto"
+                    >
+                      <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        class="w-full h-full object-cover absolute inset-0"
+                        aria-label="Promotional video"
+                      >
+                        <source src="./img/care.mp4" type="video/mp4" />
+                      </video>
+                    </div>
                   </div>
                   <div class="w-1/2">
                     <p class="text-lg font-gilroy font-normal text-black pt-7">
@@ -682,7 +750,7 @@
       </section>
       <!-- local start -->
       <section class="pt-32 pb-96 bg-beige relative" id="local">
-        <div class="lg:sticky top-10 left-0 px-4 lg:px-14">
+        <div class="lg:sticky top-10 left-0 px-4 lg:px-14 pb-16 lg:pb-0">
           <div>
             <a
               href="#"
