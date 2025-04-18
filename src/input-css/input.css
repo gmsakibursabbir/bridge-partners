@@ -1,0 +1,296 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: false;
+}
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-gilroy: "Gilroy", sans-serif;
+  --font-quarto: "Quarto", sans;
+  --font-grotesk: "Neue Haas Grotesk Display Pro", sans-serif;
+
+  --color-black: #121212;
+  --color-light-grey: #F3F4F6;
+  --color-dark-grey: #2f2f2f;
+  --color-mid-grey: #ababab;
+  --color-grey: #6f6f6f;
+  --color-electric-blue: #0062ff;
+  --color-light-grey: #f3f4f6;
+  --color-yellow: #eb9500;
+  --color-pink: #ffc5af;
+  --color-turquoise: #c1dcd9;
+  --color-beige: #f6f1e5;
+}
+
+#hero-country {
+  @apply bg-[url('../img/scenic-view-bay-against-sky.png')] bg-cover bg-center bg-no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#hero-about {
+  @apply bg-[url('../img/about-bg.png')] bg-cover bg-center bg-no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes bounceDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.bounce {
+  animation: bounceDown 1.2s ease-in-out infinite;
+}
+
+.bounce-stop:hover {
+  animation: none;
+}
+
+.progress-ring-next,
+.progress-ring-prev {
+  transition: stroke-dashoffset 0.4s ease, opacity 0.4s ease;
+}
+.collapse-arrow .collapse-title::after {
+  display: none !important;
+}
+#progressRing {
+  transition: stroke-dashoffset 0.3s ease;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+/* Overlay Menu */
+.overlay-menu {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.overlay-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Close Button Positioning */
+.overlay-menu .close-menu {
+  position: absolute;
+  top: 26px; /* Matches header's py-6.5 (1.625rem * 16px = 26px) */
+  right: 32px; /* Matches header's px-8 (2rem * 16px = 32px) */
+}
+
+/* Menu List Animation */
+.menu-list li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.overlay-menu.active .menu-list li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Animation for Menu Items */
+.overlay-menu.active .menu-list li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.overlay-menu.active .menu-list li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.overlay-menu.active .menu-list li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.overlay-menu.active .menu-list li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.overlay-menu.active .menu-list li:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.location-map iframe {
+  border-radius: 92px;
+}
+
+.approach-swiper {
+  height: 100vh;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .approach-swiper {
+    height: 500px;
+    width: 100%;
+  }
+}
+.approach-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Custom pagination progress bar styling */
+.approach-progress-bar-container {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+  border-radius: 100px;
+}
+.approach-progress-bar {
+  width: 3px;
+  height: 500px;
+  background: rgba(15, 40, 60, 0.3);
+  position: relative;
+  border-radius: 100px;
+}
+.approach-progress-bar-fill {
+  width: 6px !important;
+  background: #eb9500;
+  position: absolute;
+  top: 0;
+  transition: height 0.3s ease;
+  border-radius: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* faqs */
+.faq-default {
+  padding: 40px 50px;
+  border-radius: 0px;
+  border-bottom: 1px solid #ffc5af;
+}
+.faq-default:last-child {
+  padding: 40px 50px;
+  border-bottom: 1px solid transparent;
+}
+.faq-active {
+  padding: 40px 50px;
+  background-color: white;
+  border-radius: 25px;
+  border: 0px solid #f3f4f6;
+  box-shadow: 0px 30px 50px -10px rgba(3, 0, 126, 0.1);
+}
+.rotate-icon {
+  transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-default {
+    padding: 32px 0px;
+    border-radius: 0px;
+  }
+  .faq-default:last-child {
+    padding: 32px 0px;
+  }
+  .faq-active {
+    padding: 32px 20px;
+  }
+}
+/* nevis */
+.border-lines {
+  position: relative;
+}
+.border-lines::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 200px;
+  width: 2px;
+  opacity: 0.5;
+  background: #ababab;
+  box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.1);
+}
+.border-lines::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 200px;
+  width: 2px;
+  opacity: 0.5;
+  background: #ababab;
+  box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.1);
+}
+
+.progress-nevis-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+}
+.progress-nevis {
+  width: 90px;
+  height: 3px;
+  background: #ababab;
+  position: relative;
+  border-radius: 100px;
+}
+.progress-nevis-fill {
+  height: 6px !important;
+  background: #c1dcd9;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: width 0.3s ease;
+  border-radius: 100px;
+}
+.progress-apply-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+}
+.progress-apply {
+  width: 90px;
+  height: 3px;
+  background: #ababab;
+  position: relative;
+  border-radius: 100px;
+}
+.progress-apply-fill {
+  height: 6px !important;
+  background: #c1dcd9;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: width 0.3s ease;
+  border-radius: 100px;
+}
+/* form */
+.input-underline {
+  position: relative;
+}
+
+.input-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #4b5563;
+  transition: background-color 0.3s ease;
+}
+
+.input-underline:focus::after {
+  background-color: #fbbf24;
+}

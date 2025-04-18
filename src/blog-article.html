@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bridge Partner | Blog Article</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+  </head>
+
+  <body class="font-inter bg-light-grey">
+    <!-- header start -->
+    <!-- header start -->
+    <header class="relative z-10" id="header">
+      <div class="w-full mx-auto px-4 lg:px-14">
+        <div class="flex justify-between items-center py-6.5">
+          <a href="./index.html">
+            <img src="./img/logo.svg" alt="logo" class="w-[150px] lg:w-44" />
+          </a>
+          <div class="flex justify-center items-center gap-12">
+            <a
+              href="./contact.html"
+              class="contact-us py-3 px-9 rounded-full bg-transparent text-black hover:bg-black hover:text-white border-[1px] border-black font-medium transition duration-300 ease-in-out hidden lg:inline-block"
+            >
+              Contact Us
+            </a>
+            <span
+              class="w-10 h-[1px] bg-black hidden lg:inline-block my-auto"
+            ></span>
+
+            <!-- Hamburger Button -->
+            <label
+              for="my-drawer"
+              class="hamburger text-2xl lg:text-3xl cursor-pointer inline-block"
+            >
+              <i class="ri-menu-2-line text-black"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Overlay Menu -->
+    <div class="drawer drawer-end z-50">
+      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+
+      <div class="drawer-side">
+        <label for="my-drawer" class="drawer-overlay"></label>
+
+        <div
+          class="menu p-8 lg:p-20 w-[90vw] lg:max-w-[561px] min-h-full bg-dark-grey text-black flex flex-col justify-between relative transform translate-x-full transition-transform duration-500  drawer-open:translate-x-0 ease-[cubic-bezier(0.7,0,0.3,1)]
+"
+        >
+          <!-- Close Button -->
+          <label
+            for="my-drawer"
+            class="border-none cursor-pointer bg-dark-white absolute right-20 top-10 text-white text-2xl"
+          >
+            <i class="ri-close-large-line"></i>
+          </label>
+
+          <!-- Centered Menu -->
+          <div class="flex-grow flex items-center justify-center">
+            <!-- <ul class="space-y-8 text-center">
+              <li>
+                <a class="text-lg cursor-pointer font-light lg:text-5xl"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a class="text-lg cursor-pointer font-light lg:text-5xl"
+                  >Residency</a
+                >
+              </li>
+              <li>
+                <a class="text-lg cursor-pointer font-light lg:text-5xl"
+                  >Citizenship</a
+                >
+              </li>
+              <li>
+                <a class="text-lg cursor-pointer font-light lg:text-5xl"
+                  >Articles/Blog</a
+                >
+              </li>
+              <li>
+                <a class="text-lg cursor-pointer font-light lg:text-5xl"
+                  >Contact Us</a
+                >
+              </li>
+            </ul> -->
+            <ul class="space-y-4 lg:space-y-8 text-left -ml-10">
+              <li>
+                <a
+                  href="./index.html"
+                  class="group flex items-center text-3xl lg:text-5xl font-light text-white hover:text-white/60 transition-all duration-600"
+                >
+                  <!-- Capsule line -->
+                  <span
+                    class="inline-block w-6 h-2 lg:w-13 lg:h-3 border-[1px] border-white rounded-full -mr-1 lg:-mr-3 transform scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100 group-active:scale-x-100 group-active:opacity-100 transition-all ease-[cubic-bezier(0.65,0,0.35,1)] duration-600 origin-left"
+                  ></span>
+                  <span
+                    class="transition-all duration-600 group-hover:translate-x-7"
+                  >
+                    Home
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./about.html"
+                  class="group flex items-center text-3xl lg:text-5xl font-light text-white hover:text-white/60 transition-all duration-600"
+                >
+                  <!-- Capsule line -->
+                  <span
+                    class="inline-block w-6 h-2 lg:w-13 lg:h-3 border-[1px] border-white rounded-full -mr-1 lg:-mr-3 transform scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100 group-active:scale-x-100 group-active:opacity-100 transition-all ease-[cubic-bezier(0.65,0,0.35,1)] duration-600 origin-left"
+                  ></span>
+                  <span
+                    class="transition-all duration-600 group-hover:translate-x-7"
+                  >
+                    About Us
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="group flex items-center text-3xl lg:text-5xl font-light text-white hover:text-white/60 transition-all duration-600"
+                >
+                  <!-- Capsule line -->
+                  <span
+                    class="inline-block w-6 h-2 lg:w-13 lg:h-3 border-[1px] border-white rounded-full -mr-1 lg:-mr-3 transform scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100 group-active:scale-x-100 group-active:opacity-100 transition-all ease-[cubic-bezier(0.65,0,0.35,1)] duration-600 origin-left"
+                  ></span>
+                  <span
+                    class="transition-all duration-600 group-hover:translate-x-7"
+                  >
+                    Residency
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./blog.html"
+                  class="group flex items-center text-3xl lg:text-5xl font-light text-white hover:text-white/60 transition-all duration-600"
+                >
+                  <!-- Capsule line -->
+                  <span
+                    class="inline-block w-6 h-2 lg:w-13 lg:h-3 border-[1px] border-white rounded-full -mr-1 lg:-mr-3 transform scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100 group-active:scale-x-100 group-active:opacity-100 transition-all ease-[cubic-bezier(0.65,0,0.35,1)] duration-600 origin-left"
+                  ></span>
+                  <span
+                    class="transition-all duration-600 group-hover:translate-x-7"
+                  >
+                    Citizenship
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./blog.html"
+                  class="group flex items-center text-3xl lg:text-5xl font-light text-white/60 transition-all duration-600"
+                >
+                  <!-- Capsule line -->
+                  <span
+                    class="inline-block w-6 h-2 lg:w-13 lg:h-3 border-[1px] border-white rounded-full -mr-1 lg:-mr-3 transform scale-x-100 opacity-100 group-active:scale-x-100 group-active:opacity-100 transition-all ease-[cubic-bezier(0.65,0,0.35,1)] duration-600 origin-left is-active"
+                  ></span>
+                  <span class="transition-all duration-600 translate-x-7">
+                    Articles/Blog
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="./contact.html"
+                  class="group flex items-center text-3xl lg:text-5xl font-light text-white hover:text-white/60 transition-all duration-600"
+                >
+                  <!-- Capsule line -->
+                  <span
+                    class="inline-block w-6 h-2 lg:w-13 lg:h-3 border-[1px] border-white rounded-full -mr-1 lg:-mr-3 transform scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100 group-active:scale-x-100 group-active:opacity-100 transition-all ease-[cubic-bezier(0.65,0,0.35,1)] duration-600 origin-left"
+                  ></span>
+                  <span
+                    class="transition-all duration-600 group-hover:translate-x-7"
+                  >
+                    Contact Us
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Footer at bottom left -->
+          <div class="pt-10">
+            <ul class="space-y-2 text-left">
+              <li>
+                <a
+                  class="text-lg text-white cursor-pointer font-grotesk font-light underline underline-offset-5 inline-block hover:text-yellow"
+                  >Disclaimer</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-lg text-white cursor-pointer font-grotesk font-light underline underline-offset-5 inline-block hover:text-yellow"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- header end -->
+    <!-- main start -->
+    <main class="w-full">
+      <!-- articale start -->
+      <section class="px-4 pt-10 pb-20 lg:px-14">
+        <div
+          class="max-w-[1515px] flex flex-col lg:flex-row justify-between lg:space-x-40 space-y-10 lg:space-y-0"
+        >
+          <div
+            class="w-full lg:w-3/12 flex wow animate__fadeInleft"
+            data-wow-duration="1s"
+            data-wow-delay="0.3s"
+            data-wow-offset="0"
+            data-wow-iteration="1"
+          >
+            <div
+              class="lg:top-20 w-[240px] lg:w-full max-w-[300px] z-10 max-h-[100vh] sticky top-5"
+            >
+              <a
+                href="./blog.html"
+                class="border-[1px] border-black py-3 px-4 text-black text-sm font-medium rounded-full hover:bg-black hover:text-white transition-all duration-300 ease-in-out flex justify-center items-center w-full max-w-[240px]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-move-left-icon lucide-move-left mr-2"
+                >
+                  <path d="M6 8L2 12L6 16" />
+                  <path d="M2 12H22" />
+                </svg>
+                BACK TO ALL ARTICLES
+              </a>
+              <div class="pt-[300px] hidden lg:block" id="getmail">
+                <!-- Email -->
+                <h3
+                  class="text-black lg:text-[22px] font-medium font-grotesk pb-4"
+                >
+                  Get Our Article Updates
+                </h3>
+                <div class="relative flex items-center w-full max-w-md">
+                  <!-- Email Input -->
+                  <input
+                    type="email"
+                    placeholder="Your Email Address here"
+                    class="input input-bordered w-full bg-transparent text-grey border-white outline outline-grey rounded-full pl-4 pr-12 h-12 focus:outline-none focus:ring-2 focus:ring-turquoise font-grotesk"
+                    style="font-family: Gilroy, Bangla327, sans-serif"
+                  />
+                  <!-- Submit Button -->
+                  <button
+                    class="absolute right-1 btn btn-circle bg-[#C1DCD9] hover:bg-yellow text-lg h-11 w-11 flex items-center justify-center border-none"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="#fff"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <!-- Share -->
+                <div class="pt-10">
+                  <p class="block text-black text-[22px] font-medium mb-3">
+                    Share this post
+                  </p>
+                  <ul class="flex items-center space-x-4">
+                    <li>
+                      <a
+                        href="#"
+                        class="bg-pink hover:bg-yellow w-11 h-11 rounded-full text-white flex justify-center items-center text-xl"
+                      >
+                        <i class="ri-instagram-line"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="bg-pink hover:bg-yellow w-11 h-11 rounded-full text-white flex justify-center items-center text-xl"
+                      >
+                        <i class="ri-facebook-fill"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="bg-pink hover:bg-yellow w-11 h-11 rounded-full text-white flex justify-center items-center text-xl"
+                      >
+                        <i class="ri-twitter-fill"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full lg:w-9/12 wow animate__fadeIn"
+            data-wow-duration="0.9s"
+            data-wow-delay="0.3s"
+            data-wow-offset="0"
+            data-wow-iteration="1"
+          >
+            <ul
+              class="flex flex-row items-center gap-3 text-sm font-grotesk text-grey"
+            >
+              <li>By <a href="#" class="text-black">Daniel Vigovszky</a></li>
+              <li>|</li>
+              <li><a href="#" class="text-electric-blue">E-mail</a></li>
+              <li>|</li>
+              <li>
+                <a href="#" class="text-electric-blue"
+                  ><i class="ri-linkedin-fill"></i
+                ></a>
+              </li>
+            </ul>
+            <div class="text-sm font-grotesk text-grey mt-2 mb-3">
+              15 June 2022 | <span class="text-yellow">5 min. read</span>
+            </div>
+            <h1 class="text-3xl lg:text-6xl font-normal">
+              66% Increase in Immigration Health Surcharge to be implemented in
+              February 2024
+            </h1>
+            <article class="max-w-[840px] space-y-10 pt-10">
+              <div>
+                <img
+                  src="./img/business-meeting-embankment-metropolis-1.png"
+                  alt=""
+                />
+              </div>
+              <p
+                class="text-pink text-[22px] lg:text-3xl font-normal leading-tight"
+              >
+                The IHS is a mandatory charge for most visa applicants and is
+                usually paid alongside the application fee. It is charged
+                annually based on the permission requested and essentially
+                enables migrants to gain access to the National Health Service
+                (NHS) in the UK, throughout length of their visa.
+              </p>
+              <div>
+                <h3 class="text-[22px] font-grotesk font-medium text-black">
+                  When is the Immigration Health Surcharge (IHS) increasing?
+                </h3>
+                <p
+                  class="text-lg font-grotesk text-dark-grey italic font-normal pl-6 border-l-2 border-pink mt-[22px]"
+                >
+                  The increase to the Immigration Health Surcharge was initially
+                  anticipated to come into force on 16th January 2024. However,
+                  due to delays in the legislative process, it has now been
+                  confirmed to take place from 6th February 2024, as approved by
+                  the House of Commons via the Immigration (Health Charge)
+                  (Amendment) Order 2023.
+                </p>
+              </div>
+              <div>
+                <h3 class="text-[22px] font-grotesk font-medium text-black">
+                  Why is the Immigration Health Surcharge (IHS) increasing?
+                </h3>
+                <p
+                  class="text-lg font-grotesk text-dark-grey font-normal mt-[22px]"
+                >
+                  Since October 2020, the IHS has remained the same, however the
+                  Home Office has made their position regarding the recent 66%
+                  increase, very clear in the draft ‘Explanatory Memorandum’
+                  (The Immigration Health Charge Amendment Order 2023), that
+                  ‘the increase to the health charge reflects the increased cost
+                  of healthcare provision and the extra pressures which migrant
+                  driven population growth is placing on the NHS’.
+                </p>
+                <p
+                  class="text-lg font-grotesk text-dark-grey font-normal mt-[10px]"
+                >
+                  In effect, this increase has been enforced to fairly reflect
+                  the full cost to the NHS of treating those who pay the health
+                  charges.
+                </p>
+              </div>
+              <div>
+                <h3 class="text-[22px] font-grotesk font-medium text-black">
+                  Who is affected by this increase?
+                </h3>
+                <p
+                  class="text-lg font-grotesk text-dark-grey font-normal mt-[22px]"
+                >
+                  The change to the IHS will be significant for most applicants
+                  with the standard IHS fee increasing by a staggering 66% –
+                  there are very few applicants who are exempt from paying this.
+                  This fee is usually paid by most visa applicants, including
+                  their dependents, if the visa being applied for will be
+                  granted for more than 6 months.
+                </p>
+                <p
+                  class="text-lg font-grotesk text-dark-grey font-normal mt-[10px]"
+                >
+                  However, if you fall into one of the following categories you
+                  are not required to pay the fee:
+                </p>
+                <ul
+                  class="text-lg font-grotesk text-dark-grey font-normal mt-[22px]"
+                >
+                  <li>
+                    • You’re applying for indefinite leave to enter/remain
+                    (please note, if you apply for ILR but are only granted
+                    limited leave, you will still need to pay the IHS).
+                  </li>
+                  <li>
+                    • You’re a health and care worker er (or you’re their
+                    dependant).
+                  </li>
+                  <li>• You’re applying to the EU Settlement Scheme.</li>
+                  <li>
+                    • You’re a diplomat/ member of a visiting armed forces
+                  </li>
+                  <li>
+                    • You’re a dependant of a member of the UK’s armed forces
+                  </li>
+                  <li>
+                    • You’re applying for a visa for the Isle of Man or Channel
+                    Islands.
+                  </li>
+                  <li>
+                    • You’re a British Overseas Territory citizen resident in
+                    the Falkland Isla
+                  </li>
+                  <li>
+                    • You’re an asylum seeker or applying for humanitarian
+                    protection
+                  </li>
+                  <li>
+                    • You’re a domestic worker who has been identified as a
+                    victim of slavery or human traffic
+                  </li>
+                  <li>• You’re a S2 Healthcare Visitor.</li>
+                  <li>
+                    • You’re eligible for a Frontier Work Permit and have an S1
+                    certificate.
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-col lg:flex-row">
+                <div class="w-full lg:w-1/2">
+                  <img
+                    src="./img/simple-demo.png"
+                    alt="simple"
+                    class="w-full"
+                  />
+                </div>
+                <div class="w-full lg:w-1/2">
+                  <img
+                    src="./img/simple-demo.png"
+                    alt="simple"
+                    class="w-full"
+                  />
+                </div>
+              </div>
+              <div>
+                <h3 class="text-[22px] font-grotesk font-medium text-black">
+                  When do I pay the Immigration Health Surcharge?
+                </h3>
+                <p
+                  class="text-lg font-grotesk text-dark-grey font-normal mt-[22px]"
+                >
+                  You will be required to pay the IHS once you have submitted
+                  your visa application online. You will automatically be
+                  redirected to pay the fee before paying the application fee
+                  for your application. As part of this process, you will be
+                  expected to register to use the IHS service and answer some
+                  questions relating to your application, to help determine
+                  whether you need to pay the charge. Once payment has been
+                  made, you will typically receive an email with your unique IHS
+                  reference number.
+                </p>
+              </div>
+              <div>
+                <h3 class="text-[22px] font-grotesk font-medium text-black">
+                  How much is the Immigration Health Surcharge?
+                </h3>
+                <p
+                  class="text-lg font-grotesk text-dark-grey font-normal mt-[22px]"
+                >
+                  The Immigration Health Surcharge fee currently costs £624 per
+                  applicant per year. Additionally, there is a discounted rate
+                  of £470 for student visa holders, those on the Youth Mobility
+                  Scheme and children under the age of 18.
+                </p>
+                <p
+                  class="text-lg font-grotesk text-dark-grey font-normal mt-[10px]"
+                >
+                  However, with the intended 66% increase for the IHS this year,
+                  applicants will see the main rate reach £1,035 per year and
+                  for the discounted rate, it will sit at £776 per year. Please
+                  note, that if you cannot afford to pay the IHS you may request
+                  a fee waiver, as long as you can credibly demonstrate that you
+                  cannot afford the fee.
+                </p>
+              </div>
+              <div>
+                <h3 class="text-[22px] font-grotesk font-medium text-black">
+                  What does this mean?
+                </h3>
+                <p
+                  class="text-lg font-grotesk text-dark-grey font-normal mt-[22px]"
+                >
+                  The delay in implementation of the IHS has provided some light
+                  relief in the rush to submit applications, which is great
+                  news. Nevertheless, it is worth still proceeding with any
+                  existing or new applications, ideally before the end of
+                  January 2024.
+                </p>
+                <p
+                  class="text-lg font-grotesk text-dark-grey font-normal mt-[10px]"
+                >
+                  With this increase in the Immigration Health Surcharge (IHS),
+                  this may result in fewer applications and/or employers being
+                  more selective when recruiting. However, it is likely that the
+                  overall number of skilled individuals entering or remaining in
+                  the UK who are applying for visas will not be hugely impacted.
+                  Why do I need to pay the Immigration Health Surcharge?
+                </p>
+                <p
+                  class="text-lg font-grotesk text-dark-grey font-normal mt-[10px]"
+                >
+                  By paying the Immigration Health Surcharge fee, it will enable
+                  you to access any healthcare services that are provided by the
+                  NHS. Please note, that this payment is not optional – you
+                  cannot opt out on the basis that you don’t believe you need
+                  health care during your leave. It is compulsory to pay the
+                  fee, even if you have private health insurance.
+                </p>
+              </div>
+            </article>
+            <div class="pt-12 block lg:hidden">
+              <!-- email -->
+              <h3
+                class="text-black lg:text-[22px] font-medium font-grotesk pb-4"
+              >
+                Get Our Article Updates
+              </h3>
+              <div class="relative flex items-center w-full max-w-md">
+                <!-- Email Input -->
+                <input
+                  type="email"
+                  placeholder="Your Email Address here"
+                  class="input input-bordered w-full bg-transparent text-grey border-grey outline outline-grey rounded-full pl-4 pr-12 h-12 focus:outline-none focus:ring-2 focus:ring-teal-500 font-grotesk"
+                />
+                <!-- Submit Button -->
+                <button
+                  class="absolute right-1 btn btn-circle bg-[#C1DCD9] hover:bg-teal-300 text-white text-xl h-11 w-11 flex items-center justify-center"
+                >
+                  <i class="ri-arrow-right-line"></i>
+                </button>
+              </div>
+              <!-- share -->
+              <div class="pt-5">
+                <p class="block text-black text-[22px] font-medium mb-3">
+                  Share this post
+                </p>
+                <ul class="flex items-center space-x-4">
+                  <li>
+                    <a
+                      href="#"
+                      class="bg-pink w-12 h-12 rounded-full text-white flex justify-center items-center text-xl"
+                      ><i class="ri-instagram-line"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="bg-pink w-12 h-12 rounded-full text-white flex justify-center items-center text-xl"
+                      ><i class="ri-facebook-fill"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="bg-pink w-12 h-12 rounded-full text-white flex justify-center items-center text-xl"
+                      ><i class="ri-twitter-fill"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- request start -->
+      <section class="px-4 pt-10 pb-20 lg:px-14">
+        <div
+          class="max-w-[1320px] flex flex-col lg:flex-row justify-between lg:space-x-40 space-y-10 lg:space-y-0"
+        >
+          <div class="w-full">
+            <a
+              href="#getmail"
+              class="text-2xl text-black font-medium border-b-[1px] border-black pb-4 inline-block"
+            >
+              Request a call today
+            </a>
+          </div>
+          <form class="lg:min-w-[820px] space-y-6 pt-10 lg:pt-0">
+ <!-- Grid for 2 columns on md+ -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  class="w-full bg-transparent border-0 border-b-[3px] border-dark-grey focus:border-yellow focus:outline-none py-2 text-black font-grotesk font-normal text-lg placeholder:font-grotesk placeholder:font-normal placeholder:text-black"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  class="w-full bg-transparent border-0 border-b-[3px] border-dark-grey focus:border-yellow focus:outline-none py-2 text-black font-grotesk font-normal text-lg placeholder:font-grotesk placeholder:font-normal placeholder:text-black"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="w-full bg-transparent border-0 border-b-[3px] border-dark-grey focus:border-yellow focus:outline-none py-2 text-black font-grotesk font-normal text-lg placeholder:font-grotesk placeholder:font-normal placeholder:text-black"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Phone"
+                  class="w-full bg-transparent border-0 border-b-[3px] border-dark-grey focus:border-yellow focus:outline-none py-2 text-black font-grotesk font-normal text-lg placeholder:font-grotesk placeholder:font-normal placeholder:text-black"
+                />
+              </div>
+            </div>
+
+            <!-- Message + Send Button -->
+            <div class="flex items-end gap-4">
+              <div class="flex-1">
+                <input
+                  type="text"
+                  placeholder="Write your messages in here"
+                  class="w-full bg-transparent border-0 border-b-[3px] border-dark-grey focus:border-yellow focus:outline-none py-2 text-black font-grotesk font-normal text-lg placeholder:text-black placeholder:font-grotesk placeholder:font-normal"
+                />
+              </div>
+              <button
+                type="submit"
+                class="w-12 h-12 border border-dark-grey rounded-full flex items-center justify-center hover:bg-black hover:border-dark-grey hover:text-white transition text-2xl cursor-pointer"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 19L19 6m0 0v12.48M19 6H6.52"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- main end -->
+    <!-- footer start -->
+    <footer class="bg-dark-grey pt-10 pb-10 lg:pt-20 font-grotesk ">
+      <div
+        class="w-full mx-auto px-4 lg:px-14 space-y-10 lg:space-y-20"
+      >
+        <div
+          class="flex flex-col lg:flex-row justify-between space-x-28 space-y-12"
+        >
+          <!-- logo -->
+          <a href="./index.html">
+            <img src="./img/footer-logo.svg" alt="footer logo" />
+          </a>
+          <!-- menus -->
+          <div class="w-full lg:max-w-[656px] mx-auto">
+            <ul
+              class="flex flex-col lg:flex-row space-y-3 lg:gap-16 font-grotesk font-normal text-white text-sm"
+            >
+              <li class="flex flex-col space-y-1 lg:space-y-4">
+                <a
+                  href="mailto:info@bridgepartnersuk.com"
+                  class="hover:text-yellow"
+                  >info@bridgepartnersuk.com</a
+                >
+                <a href="tel:+4402033973897" class="hover:text-yellow"
+                  >+44 (0) 203 397 3897</a
+                >
+              </li>
+              <li class="hidden lg:block">
+                <a href="#" class="hover:text-yellow"
+                  >67 Grosvenor Street,London W1K 3JNUnited Kingdom</a
+                >
+              </li>
+              <li class="hidden lg:block">
+                <a href="#" class="hover:text-yellow"
+                  >67 Grosvenor Street,Dubai W1K 3JNUnited Arab Emirates</a
+                >
+              </li>
+              <ul class="flex lg:hidden flex-row">
+                <li class="w-1/2 lg:w-full">
+                  <a href="#" class="hover:text-yellow"
+                    >67 Grosvenor Street,London W1K 3JNUnited Kingdom</a
+                  >
+                </li>
+                <li class="w-1/2 lg:w-full">
+                  <a href="#" class="hover:text-yellow"
+                    >67 Grosvenor Street,Dubai W1K 3JNUnited Arab Emirates</a
+                  >
+                </li>
+              </ul>
+            </ul>
+            <ul
+              class="hidden lg:flex flex-row flex-wrap justify-between font-grotesk font-medium space-x-7 mt-8 lg:mt-30 w-full"
+            >
+              <li>
+                <a
+                  href="./index.html"
+                  class="text-sm text-white  font-normal hover:text-yellow"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./about.html"
+                  class="text-sm text-white  font-normal hover:text-yellow"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-white  font-normal hover:text-yellow"
+                  >Residency</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./country.html"
+                  class="text-sm text-white  font-normal hover:text-yellow"
+                  >Citezenship</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./blog.html"
+                  class="text-sm text-white  font-normal hover:text-yellow"
+                  >Articles/Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./contact.html"
+                  class="text-sm text-white  font-normal hover:text-yellow"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+            <div
+              class="flex lg:hidden flex-col lg:flex-row justify-between space-x-7 space-y-2 mt-8 lg:mt-30 w-full"
+            >
+              <ul
+                class="flex flex-row lg:justify-between font-grotesk font-medium space-x-7 w-full"
+              >
+                <li>
+                  <a
+                    href="./index.html"
+                    class="text-sm text-white  font-normal hover:text-yellow"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./about.html"
+                    class="text-sm text-white  font-normal hover:text-yellow"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-sm text-white  font-normal hover:text-yellow"
+                    >Residency</a
+                  >
+                </li>
+              </ul>
+              <ul
+                class="flex flex-row lg:justify-between font-grotesk font-medium space-x-7 w-full"
+              >
+                <li>
+                  <a
+                    href="./country.html"
+                    class="text-sm text-white  font-normal hover:text-yellow"
+                    >Citezenship</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./blog.html"
+                    class="text-sm text-white  font-normal hover:text-yellow"
+                    >Articles/Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contact.html"
+                    class="text-sm text-white  font-normal hover:text-yellow"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- social -->
+          <div class="flex flex-col lg:gap-8 w-full lg:max-w-[354px]">
+            <ul class="flex items-center space-x-3">
+              <li>
+                <p class="block text-white font-grotesk font-normal">
+                  Follow&nbspUs:
+                </p>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-yellow min-w-[50px] min-h-[50px] rounded-full bg-white flex justify-center items-center text-xl group hover:bg-yellow hover:text-white transition-all duration-300 ease-in-out"
+                  ><i class="ri-linkedin-fill group-hover:text-white"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-yellow min-w-[50px] min-h-[50px] rounded-full bg-white flex justify-center items-center text-xl group hover:bg-yellow hover:text-white transition-all duration-300 ease-in-out"
+                  ><i class="ri-instagram-line group-hover:text-white"></i
+                ></a>
+              </li>
+            </ul>
+            <div class="mt-6 mb-3 lg:mb-0 lg:mt-0">
+              <h3 class="text-white lg:text-lg font-grotesk font-normal pb-2">
+                Subscribe for Updates
+              </h3>
+              <p class="text-mid-grey font-grotesk font-medium">
+                Subscribe to our newsletter to stay up to date with our latest
+                news
+              </p>
+            </div>
+            <!-- newsletter -->
+            <div class="relative flex items-center w-full max-w-md">
+              <!-- Email Input -->
+              <input
+                type="email"
+                placeholder="Your Email Address here"
+                class="input input-bordered w-full bg-transparent text-grey border-grey outline outline-grey rounded-full pl-4 pr-12 h-12 focus:outline-none focus:ring-2 focus:ring-turquoise font-grotesk"
+              />
+              <!-- Submit Button -->
+              <button
+                class="absolute right-1 btn btn-circle bg-[#C1DCD9] hover:bg-yellow text-gray-800 text-lg h-11 w-11 flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#fff"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row justify-between gap-2 lg:gap-4">
+          <ul class="flex flex-row gap-16">
+            <li>
+              <a
+                href="#"
+                class="text-xs text-white font-grotesk font-normal hover:text-yellow"
+                >Disclaimer</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-xs text-white font-grotesk font-normal hover:text-yellow"
+                >Privacy Policy</a
+              >
+            </li>
+          </ul>
+          <p class="text-xs text-white font-grotesk font-normal">
+            © Copyright 2025 Bridge Partners, Inc. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>
