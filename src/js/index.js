@@ -18,53 +18,33 @@ document.addEventListener("DOMContentLoaded", () => {
       slideChange: function () {
         updateProgressRing(this);
       },
-      slideChangeTransitionEnd: function () {
-        updateProgressRing(this);
-      },
     },
   });
 
-  const totalSlides = mySwiper.slides.length;
-  const radius = 48;
-  const dashArray = 2 * Math.PI * radius; // ≈ 301
-
+  // Function to update progress ring for the first Swiper
   function updateProgressRing(swiper) {
     const nextRing = document.querySelector(".progress-ring-next");
-    const prevRing = document.querySelector(".progress-ring-prev");
-    if (!nextRing || !prevRing) {
-      console.error("Progress rings not found!");
+    if (!nextRing) {
+      console.error("Next progress ring not found!");
       return;
     }
 
+    const totalSlides = swiper.slides.length;
+    const radius = 16 ;
+    const dashArray = 2 * Math.PI * radius;  // ≈ 188.5
+
     const index = swiper.realIndex;
     const slidesPerView = swiper.params.slidesPerView;
-    const totalScrollable = Math.max(totalSlides - slidesPerView, 0);
-    const progress = totalScrollable > 0 ? index / totalScrollable : 0;
+    const totalScrollable = totalSlides - Math.floor(slidesPerView);
+    const progress = totalScrollable > 0 ? index / totalScrollable : 1;
 
-    // Next ring: empty at start (offset=301), full at end (offset=0)
     const nextOffset = dashArray * (1 - progress);
-    // Prev ring: full at start (offset=0), empty at end (offset=301)
-    const prevOffset = dashArray * progress;
 
-    // Update next ring
-    if (swiper.isEnd || totalScrollable === 0) {
-      nextRing.style.opacity = "1"; // Full ring at end
-      nextRing.style.strokeDashoffset = 0;
-    } else {
-      nextRing.style.opacity = "1";
-      nextRing.style.strokeDashoffset = nextOffset;
-    }
-
-    // Update prev ring
-    if (swiper.isBeginning) {
-      prevRing.style.opacity = "0"; // No ring at start
-    } else {
-      prevRing.style.opacity = "1";
-      prevRing.style.strokeDashoffset = prevOffset;
-    }
+    nextRing.style.opacity = "1";
+    nextRing.style.strokeDashoffset = nextOffset;
   }
 });
-// 2
+
 document.addEventListener("DOMContentLoaded", () => {
   const mySwiperTwo = new Swiper(".mySwiperTwo", {
     spaceBetween: 16,
@@ -79,35 +59,54 @@ document.addEventListener("DOMContentLoaded", () => {
       1280: { slidesPerView: 4.2 },
     },
     on: {
-      init: updateProgressRing,
-      slideChange: updateProgressRing,
+      init: function () {
+        updateProgressRingTwo(this);
+      },
+      slideChange: function () {
+        updateProgressRingTwo(this);
+      },
     },
   });
 
-  const totalSlides = 5; // update based on your real slides
-  const dashArray = 283;
-
-  function updateProgressRing() {
-    const index = swiper.realIndex;
-    const slidesPerView = swiper.params.slidesPerView;
-    const maxIndex = totalSlides - slidesPerView;
-    const progress = Math.min(index / maxIndex, 1);
-    const offset = dashArray * (1 - progress);
-
+  // Function to update progress ring for the second Swiper
+  function updateProgressRingTwo(swiper) {
     const nextRing = document.querySelector(".progress-ring-nextTwo");
-    const prevRing = document.querySelector(".progress-ring-prevTwo");
-
-    if (swiper.isEnd) {
-      nextRing.style.opacity = "0";
-      prevRing.style.opacity = "1";
-      prevRing.style.strokeDashoffset = offset;
-    } else {
-      nextRing.style.opacity = "1";
-      nextRing.style.strokeDashoffset = offset;
-      prevRing.style.opacity = "0";
+    if (!nextRing) {
+      console.error("Next progress ring for mySwiperTwo not found!");
+      return;
     }
+
+    const totalSlides = swiper.slides.length;
+    const radius = 16; // Must match your <circle r="16">
+    const dashArray = 2 * Math.PI * radius; // ~100.53
+
+    const index = swiper.realIndex;
+    let slidesPerView = swiper.params.slidesPerView;
+
+    // slidesPerView can be a function depending on breakpoints
+    if (typeof slidesPerView === 'object') {
+      // Get current slidesPerView based on window width
+      const width = window.innerWidth;
+      if (width >= 1280) slidesPerView = 4.2;
+      else if (width >= 1024) slidesPerView = 3.2;
+      else if (width >= 640) slidesPerView = 2.2;
+      else slidesPerView = 1.2;
+    }
+
+    const totalScrollable = totalSlides - Math.floor(slidesPerView);
+    const progress = totalScrollable > 0 ? index / totalScrollable : 1;
+
+    const nextOffset = dashArray * (1 - progress);
+
+    nextRing.style.strokeDasharray = dashArray;
+    nextRing.style.strokeDashoffset = nextOffset;
+    nextRing.style.opacity = "1";
   }
 });
+
+
+
+
 //new scroll
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".localSwiper", {
@@ -161,18 +160,18 @@ const tl = gsap.timeline({
     pinSpacing: true, // Ensure space for pinned section
     snap: {
       snapTo: [0, 0.5, 1], // Snap at Title 1, Title 2, and unpin
-      duration: { min: 0.1, max: 0.2 }, // Tight snapping
+      duration: { min: 0.1, max: 0.9 }, // Tight snapping
       ease: "power1.inOut",
     },
   },
 });
 
 // Title animations (fade in/out sequentially)
-tl.to("#title1", { opacity: 1, duration: 0.25 })
-  .to("#title1", { opacity: 0, duration: 0.25 })
-  .to("#title2", { opacity: 1, duration: 0.25 })
-  .to("#title2", { opacity: 0, duration: 0.25 })
-  .to("#title3", { opacity: 1, duration: 0.25 });
+tl.to("#title1", { opacity: 1, duration: 0.55 })
+  .to("#title1", { opacity: 0, duration: 0.55 })
+  .to("#title2", { opacity: 1, duration: 0.55 })
+  .to("#title2", { opacity: 0, duration: 0.55 })
+  .to("#title3", { opacity: 1, duration: 0.55 });
 // No collapse; section unpins and scrolls normally
 
 // Separate timeline for textscroller animation (after unpin)
@@ -183,7 +182,7 @@ gsap.fromTo(
     opacity: 1,
     y: 0,
     scale: 1, // End: visible, in place, full size
-    duration: 0.7, // Smooth and deliberate
+    duration: 1, // Smooth and deliberate
     ease: "power3.out", // Soft, natural easing
     scrollTrigger: {
       trigger: ".spacer",
@@ -192,6 +191,7 @@ gsap.fromTo(
     },
   }
 );
+
 //menu
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
