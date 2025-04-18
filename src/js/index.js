@@ -271,12 +271,16 @@ function initializeApproachSection(approachSection) {
     return;
   }
 
+  // Determine slider type
+  const isSlider2 = swiperElement.classList.contains("approach-swiper");
+  const isSlider3 = swiperElement.classList.contains("newApproach-swiper");
+
   // Initialize Swiper
   const approachSwiper = new Swiper(swiperElement, {
     direction: "vertical",
     slidesPerView: 1,
     spaceBetween: 0,
-    mousewheel: false, // Disable Swiper's mousewheel control
+    mousewheel: false,
   });
 
   // GSAP ScrollTrigger setup
@@ -292,6 +296,10 @@ function initializeApproachSection(approachSection) {
     ".approach-progress-bar-fill"
   );
 
+  // Get .linos-two or .linos-three elements
+  const linosTwo = isSlider2 ? approachSection.querySelector(".linos-two") : null;
+  const linosThree = isSlider3 ? approachSection.querySelector(".linos-three") : null;
+
   // Validate required elements
   if (!currentSlideNumber || !totalSlideNumber || !progressBarFill) {
     console.error(
@@ -300,7 +308,7 @@ function initializeApproachSection(approachSection) {
     return;
   }
 
-  // Set the total slide number (e.g., "05")
+  // Set the total slide number (e.g., "01")
   totalSlideNumber.textContent = totalSlides.toString().padStart(2, "0");
 
   // Pin the section and control the Swiper slides with scroll
@@ -311,13 +319,29 @@ function initializeApproachSection(approachSection) {
     pin: true,
     pinSpacing: true,
     scrub: 1,
+    onEnter: () => {
+      // Animate when section enters viewport
+      if (isSlider2 && linosTwo) {
+        linosTwo.classList.add("is-active");
+      } else if (isSlider3 && linosThree) {
+        linosThree.classList.add("is-active");
+      }
+    },
+    onLeave: () => {
+      // Remove animation when section leaves viewport
+      if (isSlider2 && linosTwo) {
+        linosTwo.classList.remove("is-active");
+      } else if (isSlider3 && linosThree) {
+        linosThree.classList.remove("is-active");
+      }
+    },
     onUpdate: (self) => {
       // Calculate the current slide based on scroll progress
       const progress = self.progress;
       const slideIndex = Math.round(progress * (totalSlides - 1));
-      approachSwiper.slideTo(slideIndex, 0); // Instantly change slide
+      approachSwiper.slideTo(slideIndex, 0);
 
-      // Update the current slide number (e.g., "01" to "05")
+      // Update the current slide number (e.g., "01")
       currentSlideNumber.textContent = (slideIndex + 1)
         .toString()
         .padStart(2, "0");

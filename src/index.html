@@ -63,9 +63,8 @@
         <label for="my-drawer" class="drawer-overlay"></label>
 
         <div
-  class="menu p-8 lg:p-20 w-[90vw] lg:max-w-[561px] min-h-full bg-dark-grey text-white flex flex-col justify-between relative 
-         transform translate-x-full transition-transform duration-500 ease-in-out drawer-open:translate-x-0"
->
+          class="menu p-8 lg:p-20 w-[90vw] lg:max-w-[561px] min-h-full bg-dark-grey text-white flex flex-col justify-between relative transform translate-x-full transition-transform duration-500 ease-in-out drawer-open:translate-x-0"
+        >
           <!-- Close Button -->
           <label
             for="my-drawer"
@@ -1148,7 +1147,7 @@
                     With Us, it’s always personal
                   </h3>
                 </div>
-                <div class="absolute left-0 top-65 w-[90%]">
+                <div class="absolute z-40  left-0 top-65 w-[90%]">
                   <div class="flex lg:flex-row justify-between relative">
                     <button
                       class="border-[1px] border-black rounded-full py-8 px-12 text-black font-normal italic bg-beige z-10"
@@ -1161,15 +1160,20 @@
                   class="flex flex-col lg:flex-row items-center justify-between max-w-[1150px] mx-auto space-x-5 lg:space-x-[90px] mt-30"
                 >
                   <div class="2/6">
-                    <video
-                      autoplay
-                      muted
-                      loop
-                      playsinline
-                      class="inset-0 max-w-[453px] max-h-[654px] object-cover z-0 rounded-full"
+                    <div
+                      class="w-[300px] h-[300px] md:w-[380px] md:h-[560px] rounded-full overflow-hidden relative mx-auto"
                     >
-                      <source src="./img/relationship.mp4" type="video/mp4" />
-                    </video>
+                      <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        class="w-full h-full object-cover absolute inset-0"
+                        aria-label="Promotional video"
+                      >
+                        <source src="./img/relationship.mp4" type="video/mp4" />
+                      </video>
+                    </div>
                   </div>
                   <div class="4/6">
                     <h2 class="text-[32px] lg:text-6xl font-light text-black">
@@ -1206,7 +1210,7 @@
                     With Us, it’s always personal
                   </h3>
                 </div>
-                <div class="absolute left-0 top-65 w-[90%]">
+                <div class="absolute z-40  left-0 top-65 w-[90%]">
                   <div class="flex lg:flex-row justify-between space-x-5">
                     <button
                       class="border-[1px] border-beige rounded-full text-black font-normal italic bg-beige z-10"
@@ -1214,7 +1218,7 @@
                       Care
                     </button>
                     <div
-                      class="hidden lg:block w-full h-[1px] bg-black my-auto"
+                      class="hidden lg:block w-full h-[1px] bg-black my-auto "
                     ></div>
                     <button
                       class="border-[1px] border-black rounded-full py-8 px-12 text-black font-normal italic bg-beige z-10"
@@ -1233,15 +1237,20 @@
                   class="flex flex-col lg:flex-row items-center justify-between max-w-[1150px] mx-auto space-x-5 lg:space-x-[90px] mt-30"
                 >
                   <div class="2/6">
-                    <video
-                      autoplay
-                      muted
-                      loop
-                      playsinline
-                      class="inset-0 max-w-[453px] max-h-[654px] object-cover z-0 rounded-full"
+                    <div
+                      class="w-[300px] h-[300px] md:w-[380px] md:h-[560px] rounded-full overflow-hidden relative mx-auto"
                     >
-                      <source src="./img/relationship.mp4" type="video/mp4" />
-                    </video>
+                      <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        class="w-full h-full object-cover absolute inset-0"
+                        aria-label="Promotional video"
+                      >
+                        <source src="./img/relationship-2.mp4" type="video/mp4" />
+                      </video>
+                    </div>
                   </div>
                   <div class="4/6">
                     <h2 class="text-[32px] lg:text-6xl font-light text-black">
@@ -1282,7 +1291,7 @@
                     With Us, it’s always personal
                   </h3>
                 </div>
-                <div class="absolute left-0 top-65 w-[90%]">
+                <div class="absolute z-40 left-0 top-65 w-[90%]">
                   <div class="flex lg:flex-row justify-between space-x-5">
                     <button
                       class="border-[1px] border-beige rounded-full text-black font-normal italic bg-beige z-10"
@@ -1311,15 +1320,20 @@
                   class="flex flex-col lg:flex-row items-center justify-between max-w-[1150px] mx-auto space-x-5 lg:space-x-[90px] mt-30"
                 >
                   <div class="2/6">
-                    <video
-                      autoplay
-                      muted
-                      loop
-                      playsinline
-                      class="inset-0 max-w-[453px] max-h-[654px] object-cover z-0 rounded-full"
+                    <div
+                      class="w-[300px] h-[300px] md:w-[380px] md:h-[560px] rounded-full overflow-hidden relative mx-auto"
                     >
-                      <source src="./img/relationship.mp4" type="video/mp4" />
-                    </video>
+                      <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        class="w-full h-full object-cover absolute inset-0"
+                        aria-label="Promotional video"
+                      >
+                        <source src="./img/care.mp4" type="video/mp4" />
+                      </video>
+                    </div>
                   </div>
                   <div class="4/6">
                     <h2 class="text-[32px] lg:text-6xl font-light text-black">
@@ -1722,7 +1736,7 @@
             id="accordion5"
           >
             <input
-              type="radio"
+             type="checkbox"
               name="my-accordion-group"
               id="accordion6-input"
               class="peer hidden"
