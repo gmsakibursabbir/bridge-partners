@@ -296,3 +296,6 @@ body.menu-open {
 }
 
 /* updated approch */
+html  {
+  scroll-behavior: auto !important; /* Disables default smooth scrolling */
+}

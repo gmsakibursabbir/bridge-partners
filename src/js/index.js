@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const totalSlides = swiper.slides.length;
-    const radius = 16 ;
-    const dashArray = 2 * Math.PI * radius;  // ≈ 188.5
+    const radius = 16;
+    const dashArray = 2 * Math.PI * radius; // ≈ 188.5
 
     const index = swiper.realIndex;
     const slidesPerView = swiper.params.slidesPerView;
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let slidesPerView = swiper.params.slidesPerView;
 
     // slidesPerView can be a function depending on breakpoints
-    if (typeof slidesPerView === 'object') {
+    if (typeof slidesPerView === "object") {
       // Get current slidesPerView based on window width
       const width = window.innerWidth;
       if (width >= 1280) slidesPerView = 4.2;
@@ -103,9 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
     nextRing.style.opacity = "1";
   }
 });
-
-
-
 
 //new scroll
 document.addEventListener("DOMContentLoaded", () => {
@@ -512,3 +509,26 @@ var wow = new WOW({
 wow.init();
 
 // Initialize Locomotive Scroll
+const lenis = new Lenis({
+  duration: 1.2, // Scroll duration
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function for smooth transitions
+  direction: "vertical", // Scroll direction: vertical or horizontal
+  gestureDirection: "vertical", // Gesture direction: vertical, horizontal, or both
+  smooth: true, // Enable smooth scrolling
+  mouseMultiplier: 1, // Mouse scroll speed multiplier
+  smoothTouch: false, // Disable smooth scrolling for touch devices
+  touchMultiplier: 2, // Touch scroll speed multiplier
+  infinite: false, // Disable infinite scroll
+});
+
+// Optional: Listen to scroll events
+lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
+  console.log({ scroll, limit, velocity, direction, progress });
+});
+
+// Animation frame loop function
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);

@@ -228,11 +228,11 @@
     <main class="w-full">
       <!-- hero -->
       <section
-        class="relative h-screen pt-6 pb-24 -mt-30 flex-row flex justify-center items-end"
+        class="relative min-h-screen pt-6 pb-24 -mt-30 flex-row flex justify-center items-end"
       >
-        <div class="w-full px-4 lg:px-8 pt-10 lg:pb-10">
+        <div class="w-full px-4 lg:px-8 pt-10 xl:pb-10">
           <h1
-            class="text-5xl lg:text-[100px] font-medium text-black wow animate__fadeIn max-w-[1404px]"
+            class="text-5xl lg:text-7xl xl:text-[100px] font-medium text-black wow animate__fadeIn max-w-[1404px]"
             data-wow-duration="1s"
             data-wow-delay="0.3s"
             data-wow-offset="0"
@@ -254,7 +254,7 @@
         </a>
       </section>
       <!-- contact start -->
-      <section class="py-12 lg:py-24 overflow-hidden" id="contact">
+      <section class="py-12 lg:py-24 " id="contact">
         <div
           class="w-full px-4 lg:px-8 flex flex-col lg:flex-row justify-between gap-10 mx-auto"
         >
@@ -477,14 +477,14 @@
     <footer class="bg-dark-grey pt-10 pb-10 lg:pt-20 font-grotesk">
       <div class="w-full mx-auto px-4 lg:px-14 space-y-10 lg:space-y-20">
         <div
-          class="flex flex-col lg:flex-row justify-between space-x-28 space-y-12"
+          class="flex flex-col lg:flex-row justify-between lg:gap-x-14 xl:gap-x-28 space-y-12"
         >
           <!-- logo -->
           <a href="./index.html">
             <img src="./img/footer-logo.svg" alt="footer logo" />
           </a>
           <!-- menus -->
-          <div class="w-full lg:max-w-[656px] mx-auto">
+          <div class="w-full lg:max-w-[600px] xl:max-w-[656px] mx-auto">
             <ul
               class="flex flex-col lg:flex-row space-y-3 lg:gap-16 font-grotesk font-normal text-white text-sm"
             >
@@ -623,7 +623,9 @@
             </div>
           </div>
           <!-- social -->
-          <div class="flex flex-col lg:gap-8 w-full lg:max-w-[354px]">
+          <div
+            class="flex flex-col lg:gap-8 w-full lg:max-w-[270px] xl:max-w-[354px]"
+          >
             <ul class="flex items-center space-x-3">
               <li>
                 <p class="block text-white font-grotesk font-normal">
@@ -774,6 +776,7 @@
           });
       });
     </script>
+      <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

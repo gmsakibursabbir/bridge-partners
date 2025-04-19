@@ -13,12 +13,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-<link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link rel="stylesheet" href="./css/style.min.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
+    <script src="https://unpkg.com/smooth-scrollbar@8.8.1/dist/smooth-scrollbar.js"></script>
   </head>
 
   <body class="bg-beige font-inter">
@@ -244,7 +245,7 @@
             id="hero-bg"
           >
             <h1
-              class="text-white text-6xl lg:text-[140px] leading-0 lg:leading-[100px] uppercase text-blanding lg:block hidden relative"
+              class="text-white text-6xl lg:text-[130px] xl:text-[150px] leading-0 lg:leading-[90px] xl:leading-[110px] uppercase text-blanding lg:block hidden relative"
             >
               <div
                 class="block font-inter font-light animate-text wow animate__fadeInUp mix-blend-difference"
@@ -313,18 +314,17 @@
                 us
               </div>
             </h1>
-
-            <a
-              href="#about"
-              class="group absolute bottom-3.5 left-1/2 -translate-x-1/2 min-w-9 min-h-14.5 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white hover:text-beige transition-all duration-300 ease-in-out cursor-pointer"
-              id="scroll-down"
-              aria-label="Scroll down"
-            >
-              <i
-                class="ri-arrow-down-s-line text-xl bounce bounce-stop group-hover:text-black"
-              ></i>
-            </a>
           </div>
+          <a
+            href="#about"
+            class="group absolute bottom-6 left-1/2 -translate-x-1/2 min-w-9 min-h-14.5 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white hover:text-beige transition-all duration-300 ease-in-out cursor-pointer"
+            id="scroll-down"
+            aria-label="Scroll down"
+          >
+            <i
+              class="ri-arrow-down-s-line text-xl bounce bounce-stop group-hover:text-black"
+            ></i>
+          </a>
         </div>
       </section>
       <!-- about start -->
@@ -372,52 +372,82 @@
             >
               Popular Citizenship by Investment Countries
             </h2>
-            <div class="hidden lg:flex items-center gap-4 mr-1 mt-5 justify-center">
+            <div
+              class="hidden lg:flex items-center gap-4 mr-1 mt-5 justify-center"
+            >
               <!-- Prev Button -->
-              <button class="relative w-16 h-16 border border-grey rounded-full flex items-center justify-center swiper-prev">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 8l-4 4m0 0l4 4m-4-4h20" />
+              <button
+                class="relative w-16 h-16 border border-grey rounded-full flex items-center justify-center swiper-prev"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="m6 8l-4 4m0 0l4 4m-4-4h20"
+                  />
                 </svg>
               </button>
-            
-<!-- Next Button -->
-<button class="relative w-16 h-16 border border-grey rounded-full flex items-center justify-center swiper-next">
-  <!-- Progress Ring -->
-  <svg class="absolute top-0 left-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36">
-    <!-- Background Circle -->
-    <circle
-      class="text-beige"
-      stroke="currentColor"
-      stroke-width="2"
-      fill="transparent"
-      r="16"
-      cx="18"
-      cy="18" 
-    />
-    <!-- Progress Circle -->
-    <circle
-      class="progress-ring-next text-black transition-all duration-500 ease-in-out"
-      stroke="currentColor"
-      stroke-width="2"
-      fill="transparent"
-      r="16"
-      cx="18"
-      cy="18"
-      stroke-dasharray="100"
-      stroke-dashoffset="100"
-      stroke-linecap="round"
-    />
-  </svg>
 
-  <!-- Arrow Icon -->
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m18 8l4 4m0 0l-4 4m4-4H2" />
-  </svg>
-</button>
+              <!-- Next Button -->
+              <button
+                class="relative w-16 h-16 border border-grey rounded-full flex items-center justify-center swiper-next"
+              >
+                <!-- Progress Ring -->
+                <svg
+                  class="absolute top-0 left-0 w-full h-full transform -rotate-90"
+                  viewBox="0 0 36 36"
+                >
+                  <!-- Background Circle -->
+                  <circle
+                    class="text-beige"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="transparent"
+                    r="16"
+                    cx="18"
+                    cy="18"
+                  />
+                  <!-- Progress Circle -->
+                  <circle
+                    class="progress-ring-next text-black transition-all duration-500 ease-in-out"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="transparent"
+                    r="16"
+                    cx="18"
+                    cy="18"
+                    stroke-dasharray="100"
+                    stroke-dashoffset="100"
+                    stroke-linecap="round"
+                  />
+                </svg>
 
+                <!-- Arrow Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="m18 8l4 4m0 0l-4 4m4-4H2"
+                  />
+                </svg>
+              </button>
             </div>
-            
-            
           </div>
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -662,9 +692,14 @@
               </button>
 
               <!-- Next Button -->
-              <button class="relative w-16 h-16 border border-grey rounded-full flex items-center justify-center swiper-nextTwo">
+              <button
+                class="relative w-16 h-16 border border-grey rounded-full flex items-center justify-center swiper-nextTwo"
+              >
                 <!-- Progress Ring -->
-                <svg class="absolute top-0 left-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                <svg
+                  class="absolute top-0 left-0 w-full h-full transform -rotate-90"
+                  viewBox="0 0 36 36"
+                >
                   <!-- Background Circle -->
                   <circle
                     class="text-white"
@@ -673,7 +708,7 @@
                     fill="transparent"
                     r="16"
                     cx="18"
-                    cy="18" 
+                    cy="18"
                   />
                   <!-- Progress Circle -->
                   <circle
@@ -689,13 +724,24 @@
                     stroke-linecap="round"
                   />
                 </svg>
-              
+
                 <!-- Arrow Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m18 8l4 4m0 0l-4 4m4-4H2" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="m18 8l4 4m0 0l-4 4m4-4H2"
+                  />
                 </svg>
               </button>
-              
             </div>
           </div>
           <div class="swiper mySwiperTwo">
@@ -916,7 +962,7 @@
             </a>
           </div>
           <div
-            class="title absolute text-7xl lg:text-8xl text-center font-medium opacity-0 text-black z-10"
+            class="title absolute text-7xl lg:text-8xl text-center font-medium opacity-0 \text-black z-10"
             id="title1"
           >
             Your Journey.
@@ -949,19 +995,19 @@
       <section>
         <div class="textscroller lg:py-10 px-4 lg:px-14 opacity-0">
           <div
-            class="flex flex-col lg:flex-row justify-between item-center lg:items-end"
+            class="flex flex-col lg:flex-row justify-between item-center lg:items-end lg:space-x-20"
           >
             <h3
               class="text-[32px] lg:text-6xl font-inter font-medium text-black max-w-[995px]"
             >
-              At ,
-              <span class="text-gray-500">Bridge Partners Global</span> we are
+              At
+              <span class="text-gray-500">Bridge Partners Global</span>, we are
               more than just advisors—we are your
               <span class="text-gray-500">trusted partners</span>
               on the journey to global mobility.
             </h3>
             <div
-              class="max-w-[300px] lg:max-w-[494px] mx-auto lg:mx-0 mt-10 lg:mt-0"
+              class="w-full lg:max-w-[494px] mx-auto px-12 lg:px-0 lg:mx-0 mt-10 lg:mt-0"
             >
               <p class="text-lg text-black font-grotesk font-normal">
                 With a proven track record in both immigration and investment
@@ -1136,7 +1182,7 @@
         </div>
       </section>
       <!-- approch start -->
-      <section class="px-4 lg:px-14 relative approach lg:block hidden">
+      <section class="px-4 lg:px-14 relative approach xl:block hidden">
         <div class="swiper approach-swiper">
           <div class="swiper-wrapper">
             <!-- slider 1 -->
@@ -1177,7 +1223,7 @@
                 >
                   <div class="2/6">
                     <div
-                      class="w-[300px] h-[300px] md:w-[380px] md:h-[560px] rounded-full overflow-hidden relative mx-auto"
+                      class="w-[300px] h-[300px] lg:w-[230px] lg:h-[430px] 2xl:w-[380px] 2xl:h-[560px] rounded-full overflow-hidden relative mx-auto"
                     >
                       <video
                         autoplay
@@ -1254,7 +1300,7 @@
                 >
                   <div class="2/6">
                     <div
-                      class="w-[300px] h-[300px] md:w-[380px] md:h-[560px] rounded-full overflow-hidden relative mx-auto"
+                      class="w-[300px] h-[300px] lg:w-[230px] lg:h-[430px] 2xl:w-[380px] 2xl:h-[560px] rounded-full overflow-hidden relative mx-auto"
                     >
                       <video
                         autoplay
@@ -1340,7 +1386,7 @@
                 >
                   <div class="2/6">
                     <div
-                      class="w-[300px] h-[300px] md:w-[380px] md:h-[560px] rounded-full overflow-hidden relative mx-auto"
+                      class="w-[300px] h-[300px] lg:w-[230px] lg:h-[430px] 2xl:w-[380px] 2xl:h-[560px] rounded-full overflow-hidden relative mx-auto"
                     >
                       <video
                         autoplay
@@ -1391,7 +1437,7 @@
         </div>
       </section>
       <!-- approch two -->
-      <section class="px-4 py-10 block lg:hidden">
+      <section class="px-4 py-10 block xl:hidden">
         <div class="swiper twoApprochSwiper">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
@@ -1833,7 +1879,7 @@
         <div
           class="max-w-[1320px] flex flex-col lg:flex-row justify-between space-x-40"
         >
-          <div class="w-full">
+          <div class="w-full lg:max-w-[250px]">
             <a
               href="#"
               class="text-2xl text-black font-medium border-b-[1px] border-black pb-4 inline-block mb-10 lg:mb-0"
@@ -1841,7 +1887,7 @@
               Request a call today
             </a>
           </div>
-          <form class="lg:min-w-[820px] space-y-6">
+          <form class="w-full xl:min-w-[820px] space-y-6">
             <!-- Grid for 2 columns on md+ -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -1912,14 +1958,14 @@
     <footer class="bg-dark-grey pt-10 pb-10 lg:pt-20 font-grotesk">
       <div class="w-full mx-auto px-4 lg:px-14 space-y-10 lg:space-y-20">
         <div
-          class="flex flex-col lg:flex-row justify-between space-x-28 space-y-12"
+          class="flex flex-col lg:flex-row justify-between lg:gap-x-14 xl:gap-x-28 space-y-12"
         >
           <!-- logo -->
           <a href="./index.html">
             <img src="./img/footer-logo.svg" alt="footer logo" />
           </a>
           <!-- menus -->
-          <div class="w-full lg:max-w-[656px] mx-auto">
+          <div class="w-full lg:max-w-[600px] xl:max-w-[656px] mx-auto">
             <ul
               class="flex flex-col lg:flex-row space-y-3 lg:gap-16 font-grotesk font-normal text-white text-sm"
             >
@@ -2058,7 +2104,9 @@
             </div>
           </div>
           <!-- social -->
-          <div class="flex flex-col lg:gap-8 w-full lg:max-w-[354px]">
+          <div
+            class="flex flex-col lg:gap-8 w-full lg:max-w-[270px] xl:max-w-[354px]"
+          >
             <ul class="flex items-center space-x-3">
               <li>
                 <p class="block text-white font-grotesk font-normal">
@@ -2199,6 +2247,7 @@
       });
     </script>
 
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
