@@ -22,6 +22,8 @@
   --color-beige: #f6f1e5;
 
   --breakpoint-3xl: 100rem;
+  --breakpoint-xl2: 85.375rem;
+  --breakpoint-xl3: 90rem;
 }
 
 #hero-country {
@@ -125,8 +127,14 @@ body.menu-open {
 }
 
 .approach-swiper {
-  height: 100vh;
+  height: 106vh;
   width: 100%;
+}
+@media screen and (max-width: 1280px) {
+  .approach-swiper {
+    height: 100vh;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   .approach-swiper {
@@ -225,6 +233,50 @@ body.menu-open {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  height: 200px;
+  width: 2px;
+  opacity: 0.5;
+  background: #ababab;
+  box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.1);
+}
+.border-lines-two {
+  position: relative;
+  height: 100%;
+}
+.border-lines-two::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 30%;
+  transform: translateY(-30%);
+  height: 200px;
+  width: 2px;
+  opacity: 0.5;
+  background: #ababab;
+  box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.1);
+}
+.border-lines-two::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 30%;
+  transform: translateY(-30%);
+  height: 200px;
+  width: 2px;
+  opacity: 0.5;
+  background: #ababab;
+  box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.1);
+}
+.border-lines-mini {
+  position: relative;
+  height: 100%;
+}
+.border-lines-mini::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 30%;
+  transform: translateY(-30%);
   height: 200px;
   width: 2px;
   opacity: 0.5;
