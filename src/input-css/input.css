@@ -20,6 +20,8 @@
   --color-pink: #ffc5af;
   --color-turquoise: #c1dcd9;
   --color-beige: #f6f1e5;
+
+  --breakpoint-3xl: 100rem;
 }
 
 #hero-country {
@@ -203,6 +205,7 @@ body.menu-open {
 /* nevis */
 .border-lines {
   position: relative;
+  height: 100%;
 }
 .border-lines::before {
   content: "";
@@ -296,6 +299,6 @@ body.menu-open {
 }
 
 /* updated approch */
-html  {
+html {
   scroll-behavior: auto !important; /* Disables default smooth scrolling */
 }
