@@ -532,3 +532,16 @@ function raf(time) {
   requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
+// menuss
+function animateIcon(btn) {
+  btn.classList.add("rotate-[60deg]");
+  setTimeout(() => {
+    btn.classList.remove("rotate-[60deg]");
+  }, 1500); // 1 second
+}
+
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const closeBtn = document.getElementById("closeBtn");
+
+hamburgerBtn.addEventListener("click", () => animateIcon(hamburgerBtn));
+closeBtn.addEventListener("click", () => animateIcon(closeBtn));
