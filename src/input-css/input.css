@@ -7,7 +7,7 @@
   --font-inter: "Inter", sans-serif;
   --font-gilroy: "Gilroy", sans-serif;
   --font-quarto: "Quarto", sans;
-  --font-grotesk: "Neue Haas Grotesk Display Pro", sans-serif;
+  --font-grotesk: "Neue Haas Unica W1G", sans-serif;
 
   --color-black: #121212;
   --color-light-grey: #f3f4f6;
@@ -353,4 +353,11 @@ body.menu-open {
 /* updated approch */
 html {
   scroll-behavior: auto !important; /* Disables default smooth scrolling */
+}
+.faq-arrow {
+  transition: transform 0.3s ease;
+}
+
+.faq-arrow.rotate {
+  transform: rotate(180deg);
 }

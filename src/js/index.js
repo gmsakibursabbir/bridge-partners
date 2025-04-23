@@ -403,11 +403,11 @@ const checkboxInputs = document.querySelectorAll(
 
 checkboxInputs.forEach((input) => {
   input.addEventListener("change", () => {
-    // Get all accordion containers and icons
     const allAccordions = document.querySelectorAll(".collapse");
     const allIcons = document.querySelectorAll(".icon");
+    const allArrows = document.querySelectorAll(".faq-arrow");
 
-    // Reset all accordions to faq-default and icons to down arrow
+    // Reset everything
     allAccordions.forEach((accordion) => {
       accordion.classList.remove("faq-active");
       accordion.classList.add("faq-default");
@@ -416,18 +416,28 @@ checkboxInputs.forEach((input) => {
       icon.classList.remove("ri-arrow-up-long-line");
       icon.classList.add("ri-arrow-down-long-line");
     });
+    allArrows.forEach((arrow) => {
+      arrow.classList.remove("rotate");
+    });
 
-    // If the input is checked, set its parent to faq-active and change icon to up arrow
     const parentAccordion = input.closest(".collapse");
     const icon = parentAccordion.querySelector(".icon");
+    const arrow = parentAccordion.querySelector(".faq-arrow");
+
     if (input.checked) {
       parentAccordion.classList.remove("faq-default");
       parentAccordion.classList.add("faq-active");
-      icon.classList.remove("ri-arrow-down-long-line");
-      icon.classList.add("ri-arrow-up-long-line");
+
+      if (icon) {
+        icon.classList.remove("ri-arrow-down-long-line");
+        icon.classList.add("ri-arrow-up-long-line");
+      }
+      if (arrow) {
+        arrow.classList.add("rotate");
+      }
     }
 
-    // Uncheck other checkboxes to ensure only one accordion is open
+    // Uncheck others
     checkboxInputs.forEach((otherInput) => {
       if (otherInput !== input) {
         otherInput.checked = false;

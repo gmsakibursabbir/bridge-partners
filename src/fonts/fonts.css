@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Gilroy';
-    src: url('Gilroy-Light.woff2') format('woff2'),
-        url('Gilroy-Light.woff') format('woff');
-    font-weight: 300;
+    src: url('Gilroy-Thin.woff2') format('woff2'),
+        url('Gilroy-Thin.woff') format('woff');
+    font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
@@ -17,19 +17,19 @@
 }
 
 @font-face {
-    font-family: 'Gilroy';
-    src: url('Gilroy-Medium.woff2') format('woff2'),
-        url('Gilroy-Medium.woff') format('woff');
-    font-weight: 500;
+    font-family: 'Neue Haas Unica W1G';
+    src: url('NeueHaasUnicaW1G-Bold.woff2') format('woff2'),
+        url('NeueHaasUnicaW1G-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('Gilroy-Thin.woff2') format('woff2'),
-        url('Gilroy-Thin.woff') format('woff');
-    font-weight: 100;
+    src: url('Gilroy-Medium.woff2') format('woff2'),
+        url('Gilroy-Medium.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -53,91 +53,19 @@
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url('Inter-Bold.woff2') format('woff2'),
-        url('Inter-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter Extra';
-    src: url('Inter-ExtraBold.woff2') format('woff2'),
-        url('Inter-ExtraBold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter Light BETA';
-    src: url('Inter-LightBETA.woff2') format('woff2'),
-        url('Inter-LightBETA.woff') format('woff');
+    font-family: 'Quarto';
+    src: url('Quarto-Light.woff2') format('woff2'),
+        url('Quarto-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url('Inter-Medium.woff2') format('woff2'),
-        url('Inter-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('Inter-Regular.woff2') format('woff2'),
-        url('Inter-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter Semi';
-    src: url('Inter-SemiBold.woff2') format('woff2'),
-        url('Inter-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'NeueHaasGroteskDisp Pro';
-    src: url('NHaasGroteskDSPro-25Th.woff2') format('woff2'),
-        url('NHaasGroteskDSPro-25Th.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'NeueHaasGroteskText Pro';
-    src: url('NHaasGroteskTXPro-55Rg.woff2') format('woff2'),
-        url('NHaasGroteskTXPro-55Rg.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'NeueHaasGroteskText Pro Md';
-    src: url('NHaasGroteskTXPro-65Md.woff2') format('woff2'),
-        url('NHaasGroteskTXPro-65Md.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'NeueHaasGroteskText Pro';
-    src: url('NHaasGroteskTXPro-75Bd.woff2') format('woff2'),
-        url('NHaasGroteskTXPro-75Bd.woff') format('woff');
-    font-weight: bold;
+    font-family: 'Neue Haas Unica W1G';
+    src: url('NeueHaasUnicaW1G-Light.woff2') format('woff2'),
+        url('NeueHaasUnicaW1G-Light.woff') format('woff');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
@@ -152,36 +80,18 @@
 }
 
 @font-face {
-    font-family: 'Quarto';
-    src: url('Quarto-Black.woff2') format('woff2'),
-        url('Quarto-Black.woff') format('woff');
-    font-weight: 900;
+    font-family: 'Neue Haas Unica W1G';
+    src: url('NeueHaasUnicaW1G-Medium.woff2') format('woff2'),
+        url('NeueHaasUnicaW1G-Medium.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'QuartoLight';
-    src: url('QuartoLight-RegularItalic.woff2') format('woff2'),
-        url('QuartoLight-RegularItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Quarto';
-    src: url('Quarto-BlackItalic.woff2') format('woff2'),
-        url('Quarto-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Quarto';
-    src: url('Quarto-Regular.woff2') format('woff2'),
-        url('Quarto-Regular.woff') format('woff');
+    font-family: 'Neue Haas Unica W1G';
+    src: url('NeueHaasUnicaW1G-Regular.woff2') format('woff2'),
+        url('NeueHaasUnicaW1G-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -193,15 +103,6 @@
         url('Quarto-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Quarto';
-    src: url('Quarto-Bold.woff2') format('woff2'),
-        url('Quarto-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
     font-display: swap;
 }
 
@@ -225,15 +126,6 @@
 
 @font-face {
     font-family: 'Quarto';
-    src: url('Quarto-Semibold.woff2') format('woff2'),
-        url('Quarto-Semibold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Quarto';
     src: url('Quarto-SemiboldItalic.woff2') format('woff2'),
         url('Quarto-SemiboldItalic.woff') format('woff');
     font-weight: 600;
@@ -243,9 +135,18 @@
 
 @font-face {
     font-family: 'Quarto';
-    src: url('Quarto-Light.woff2') format('woff2'),
-        url('Quarto-Light.woff') format('woff');
+    src: url('Quarto-LightItalic.woff2') format('woff2'),
+        url('Quarto-LightItalic.woff') format('woff');
     font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quarto';
+    src: url('Quarto-Semibold.woff2') format('woff2'),
+        url('Quarto-Semibold.woff') format('woff');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }

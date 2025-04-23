@@ -17,9 +17,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.min.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
-    <script src="https://unpkg.com/smooth-scrollbar@8.8.1/dist/smooth-scrollbar.js"></script>
   </head>
 
   <body class="bg-beige font-inter">
@@ -47,12 +50,12 @@
 
             <!-- Hamburger Button -->
             <label
-            for="my-drawer"
-            id="hamburgerBtn"
-            class="hamburger text-2xl lg:text-3xl cursor-pointer inline-block transition-transform duration-500"
-          >
-            <i class="ri-menu-2-line text-white"></i>
-          </label>
+              for="my-drawer"
+              id="hamburgerBtn"
+              class="hamburger text-2xl lg:text-3xl cursor-pointer inline-block transition-transform duration-500"
+            >
+              <i class="ri-menu-2-line text-white"></i>
+            </label>
           </div>
         </div>
       </div>
@@ -69,12 +72,12 @@
         >
           <!-- Close Button -->
           <label
-          for="my-drawer"
-          id="closeBtn"
-          class="border-none cursor-pointer bg-dark-grey absolute right-20 top-10 text-white text-2xl transition-transform duration-500"
-        >
-          <i class="ri-close-large-line"></i>
-        </label>
+            for="my-drawer"
+            id="closeBtn"
+            class="border-none cursor-pointer bg-dark-grey absolute right-20 top-10 text-white text-2xl transition-transform duration-500"
+          >
+            <i class="ri-close-large-line"></i>
+          </label>
 
           <!-- Centered Menu -->
           <div class="flex-grow flex items-center justify-center">
@@ -247,7 +250,7 @@
             id="hero-bg"
           >
             <h1
-              class="text-white text-6xl lg:text-[130px] xl:text-[150px] leading-0 lg:leading-[90px] xl:leading-[110px] uppercase text-blanding lg:block hidden relative"
+              class="text-white text-6xl lg:text-[130px] xl:text-[180px] leading-0 lg:leading-[90px] xl:leading-[130px] uppercase text-blanding lg:block hidden relative"
             >
               <div
                 class="block font-inter font-light animate-text wow animate__fadeInUp mix-blend-difference"
@@ -283,7 +286,7 @@
                 data-wow-offset="30"
                 data-wow-iteration="1"
               >
-                go global
+                go <span class="font-medium">global</span>
               </div>
               <div
                 class="block text-end -mt-3 -mr-3 lg:-mr-28 animate-text wow animate__fadeInUp mix-blend-difference"
@@ -1000,7 +1003,7 @@
             class="flex flex-col lg:flex-row justify-between item-center lg:items-end lg:space-x-20"
           >
             <h3
-              class="text-[32px] lg:text-6xl font-inter font-medium text-black max-w-[995px]"
+              class="text-[32px] lg:text-6xl font-inter font-light text-black max-w-[995px]"
             >
               At
               <span class="text-gray-500">Bridge Partners Global</span>, we are
@@ -1021,13 +1024,26 @@
               <div class="flex items-center mt-10 group">
                 <a
                   href="#"
-                  class="border-2 border-black py-3 px-9 text-black text-sm font-medium rounded-full group-hover:bg-black group-hover:text-white transition-all duration-400 ease-in-out inline-block"
+                  class="border-1 border-black py-3 px-9 text-black text-sm font-medium rounded-full group-hover:bg-black group-hover:text-white transition-all duration-400 ease-in-out inline-block"
                   >LEARN MORE</a
                 >
                 <a
                   href="#"
-                  class="w-12 h-12 border-2 border-black bg-black text-beige text-2xl font-inter font-medium group-hover:bg-transparent group-hover:text-black transition-all duration-400 ease-in-out cursor-pointer rounded-full flex items-center justify-center"
-                  ><i class="ri-arrow-right-up-line"></i
+                  class="w-12 h-12 border-1 border-black bg-black text-beige text-2xl font-inter font-medium group-hover:bg-transparent group-hover:text-black transition-all duration-400 ease-in-out cursor-pointer rounded-full flex items-center justify-center"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4 stroke-white group-hover:stroke-black transition-colors duration-300"
+                    viewBox="0 0 16 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M2.07422 12.311L14.751 1.21875"
+                      class="stroke-[1.5] stroke-linecap-round stroke-linejoin-round"
+                    />
+                    <path
+                      d="M1.34375 1.21875H14.75V12.9492"
+                      class="stroke-[1.5] stroke-linecap-round stroke-linejoin-round"
+                    /></svg
                 ></a>
               </div>
             </div>
@@ -1704,9 +1720,13 @@
                 <span>What is Citizenship by Investment?</span>
                 <!-- Icon container -->
                 <div
-                  class="min-w-14 min-h-14 lg:w-16 lg:h-16 p-3 rounded-full border-2 border-gray-400 flex items-center justify-center"
+                  class="min-w-14 min-h-14 lg:w-16 lg:h-16 p-3 rounded-full border-1 border-grey/50 flex items-center justify-center"
                 >
-                  <i class="ri-arrow-down-long-line text-xl icon"></i>
+                  <img
+                    src="./img/faq-arrow.svg"
+                    alt="arrow"
+                    class="w-[10px] faq-arrow"
+                  />
                 </div>
               </label>
             </div>
@@ -1736,9 +1756,13 @@
                 <span>How does the Residency by Investment program work?</span>
                 <!-- Icon container -->
                 <div
-                  class="min-w-14 min-h-14 lg:w-16 lg:h-16 p-3 rounded-full border-2 border-gray-400 flex items-center justify-center"
+                  class="min-w-14 min-h-14 lg:w-16 lg:h-16 p-3 rounded-full border-1 border-grey/50 flex items-center justify-center"
                 >
-                  <i class="ri-arrow-down-long-line text-xl icon"></i>
+                  <img
+                    src="./img/faq-arrow.svg"
+                    alt="arrow"
+                    class="w-[10px] faq-arrow"
+                  />
                 </div>
               </label>
             </div>
@@ -1771,9 +1795,13 @@
                 >
                 <!-- Icon container -->
                 <div
-                  class="min-w-14 min-h-14 lg:w-16 lg:h-16 p-3 rounded-full border-2 border-gray-400 flex items-center justify-center"
+                  class="min-w-14 min-h-14 lg:w-16 lg:h-16 p-3 rounded-full border-1 border-grey/50 flex items-center justify-center"
                 >
-                  <i class="ri-arrow-down-long-line text-xl icon"></i>
+                  <img
+                    src="./img/faq-arrow.svg"
+                    alt="arrow"
+                    class="w-[10px] faq-arrow"
+                  />
                 </div>
               </label>
             </div>
@@ -1803,9 +1831,13 @@
                 <span>What are the benefits of a second passport?</span>
                 <!-- Icon container -->
                 <div
-                  class="min-w-14 min-h-14 lg:w-16 lg:h-16 p-3 rounded-full border-2 border-gray-400 flex items-center justify-center"
+                  class="min-w-14 min-h-14 lg:w-16 lg:h-16 p-3 rounded-full border-1 border-grey/50 flex items-center justify-center"
                 >
-                  <i class="ri-arrow-down-long-line text-xl icon"></i>
+                  <img
+                    src="./img/faq-arrow.svg"
+                    alt="arrow"
+                    class="w-[10px] faq-arrow"
+                  />
                 </div>
               </label>
             </div>
@@ -1837,9 +1869,13 @@
                 >
                 <!-- Icon container -->
                 <div
-                  class="min-w-14 min-h-14 lg:w-16 lg:h-16 p-3 rounded-full border-2 border-gray-400 flex items-center justify-center"
+                  class="min-w-14 min-h-14 lg:w-16 lg:h-16 p-3 rounded-full border-1 border-grey/50 flex items-center justify-center"
                 >
-                  <i class="ri-arrow-down-long-line text-xl icon"></i>
+                  <img
+                    src="./img/faq-arrow.svg"
+                    alt="arrow"
+                    class="w-[10px] faq-arrow"
+                  />
                 </div>
               </label>
             </div>
@@ -1872,9 +1908,13 @@
                 >
                 <!-- Icon container -->
                 <div
-                  class="min-w-14 min-h-14 lg:w-16 lg:h-16 p-3 rounded-full border-2 border-gray-400 flex items-center justify-center"
+                  class="min-w-14 min-h-14 lg:w-16 lg:h-16 p-3 rounded-full border-1 border-grey/50 flex items-center justify-center"
                 >
-                  <i class="ri-arrow-down-long-line text-xl icon"></i>
+                  <img
+                    src="./img/faq-arrow.svg"
+                    alt="arrow"
+                    class="w-[10px] faq-arrow"
+                  />
                 </div>
               </label>
             </div>
@@ -1898,9 +1938,11 @@
               Request a call today
             </a>
           </div>
-          <form class="w-full xl:min-w-[820px] space-y-6">
+          <form class="w-full xl:min-w-[820px] space-y-[50px] lg:space-y-16">
             <!-- Grid for 2 columns on md+ -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:gap-x-[50px] gap-y-[50px] lg:gap-y-16"
+            >
               <div>
                 <input
                   type="text"
