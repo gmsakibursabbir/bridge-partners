@@ -83,16 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const index = swiper.realIndex;
     let slidesPerView = swiper.params.slidesPerView;
 
-    // slidesPerView can be a function depending on breakpoints
-    if (typeof slidesPerView === "object") {
-      // Get current slidesPerView based on window width
-      const width = window.innerWidth;
-      if (width >= 1280) slidesPerView = 4.2;
-      else if (width >= 1024) slidesPerView = 3.2;
-      else if (width >= 640) slidesPerView = 2.2;
-      else slidesPerView = 1.2;
-    }
-
     const totalScrollable = totalSlides - Math.floor(slidesPerView);
     const progress = totalScrollable > 0 ? index / totalScrollable : 1;
 
@@ -151,7 +141,7 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".scrolpartnership",
     start: "top top", // Pin when section top hits viewport top
-    end: "+=100%", // Short scroll for 2 titles
+    end: "+=400%", // Short scroll for 2 titles
     scrub: true, // Sync animation with scroll
     pin: true, // Pin the section
     pinSpacing: true, // Ensure space for pinned section
@@ -295,16 +285,18 @@ function initializeApproachSection(approachSection) {
     return;
   }
 
-  // Initialize Swiper
+  // Initialize Swiper with transition effect
   const approachSwiper = new Swiper(swiperElement, {
     direction: "vertical",
     slidesPerView: 1,
     spaceBetween: 0,
     mousewheel: false, // Disable Swiper's mousewheel control
+    speed: 600, // Transition speed in milliseconds
+    effect: "fade", // Use fade effect for smooth transitions (or "slide", "cube", etc.)
+    fadeEffect: {
+      crossFade: true, // Ensures smooth fading between slides
+    },
   });
-
-  // GSAP ScrollTrigger setup
-  gsap.registerPlugin(ScrollTrigger);
 
   // Get DOM elements within this section
   const totalSlides = approachSwiper.slides.length;
@@ -324,7 +316,7 @@ function initializeApproachSection(approachSection) {
     return;
   }
 
-  // Set the total slide number (e.g., "05")
+  // Set the total slide number (e.g., "03")
   totalSlideNumber.textContent = totalSlides.toString().padStart(2, "0");
 
   // Pin the section and control the Swiper slides with scroll
@@ -334,14 +326,16 @@ function initializeApproachSection(approachSection) {
     end: () => `+=${window.innerHeight * (totalSlides - 1)}`,
     pin: true,
     pinSpacing: true,
-    scrub: 1,
+    scrub: 0.5, // Reduced scrub value for smoother scroll response
     onUpdate: (self) => {
       // Calculate the current slide based on scroll progress
       const progress = self.progress;
       const slideIndex = Math.round(progress * (totalSlides - 1));
-      approachSwiper.slideTo(slideIndex, 0); // Instantly change slide
 
-      // Update the current slide number (e.g., "01" to "05")
+      // Smoothly transition to the calculated slide
+      approachSwiper.slideTo(slideIndex, 600); // Match transition speed (600ms)
+
+      // Update the current slide number (e.g., "01" to "03")
       currentSlideNumber.textContent = (slideIndex + 1)
         .toString()
         .padStart(2, "0");
@@ -411,11 +405,23 @@ checkboxInputs.forEach((input) => {
     allAccordions.forEach((accordion) => {
       accordion.classList.remove("faq-active");
       accordion.classList.add("faq-default");
+
+      // Show all divider borders
+      const prevDivider = accordion.previousElementSibling;
+      const nextDivider = accordion.nextElementSibling;
+      if (prevDivider?.classList.contains("divider-border-line")) {
+        prevDivider.style.display = "block";
+      }
+      if (nextDivider?.classList.contains("divider-border-line")) {
+        nextDivider.style.display = "block";
+      }
     });
+
     allIcons.forEach((icon) => {
       icon.classList.remove("ri-arrow-up-long-line");
       icon.classList.add("ri-arrow-down-long-line");
     });
+
     allArrows.forEach((arrow) => {
       arrow.classList.remove("rotate");
     });
@@ -432,12 +438,24 @@ checkboxInputs.forEach((input) => {
         icon.classList.remove("ri-arrow-down-long-line");
         icon.classList.add("ri-arrow-up-long-line");
       }
+
       if (arrow) {
         arrow.classList.add("rotate");
       }
+
+      // Hide top and bottom .divider-border-line
+      const prevDivider = parentAccordion.previousElementSibling;
+      const nextDivider = parentAccordion.nextElementSibling;
+
+      if (prevDivider?.classList.contains("divider-border-line")) {
+        prevDivider.style.display = "none";
+      }
+      if (nextDivider?.classList.contains("divider-border-line")) {
+        nextDivider.style.display = "none";
+      }
     }
 
-    // Uncheck others
+    // Uncheck other inputs
     checkboxInputs.forEach((otherInput) => {
       if (otherInput !== input) {
         otherInput.checked = false;
@@ -542,6 +560,7 @@ function raf(time) {
   requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
+
 // menuss
 function animateIcon(btn) {
   btn.classList.add("rotate-[60deg]");
@@ -555,3 +574,65 @@ const closeBtn = document.getElementById("closeBtn");
 
 hamburgerBtn.addEventListener("click", () => animateIcon(hamburgerBtn));
 closeBtn.addEventListener("click", () => animateIcon(closeBtn));
+
+// Animate lines to the left
+gsap.utils.toArray(".hero-line-left").forEach((line) => {
+  gsap.to(line, {
+    x: -100, // move left
+    scrollTrigger: {
+      trigger: "#hero",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+});
+
+// Animate lines to the right
+gsap.utils.toArray(".hero-line-right").forEach((line) => {
+  gsap.to(line, {
+    x: 100, // move right
+    scrollTrigger: {
+      trigger: "#hero",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+});
+
+// JavaScript for smooth header visibility on scroll
+const header = document.getElementById("header");
+let lastScrollTop = 0;
+
+// Debounce function to limit scroll event frequency
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Scroll handler
+const handleScroll = debounce(() => {
+  const currentScroll =
+    window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop && currentScroll > 20) {
+    // Scrolling down and past 20px
+    header.classList.add("-translate-y-full");
+  } else if (currentScroll === 0) {
+    // Exactly at the top (scroll position 0)
+    header.classList.remove("-translate-y-full");
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+}, 20);
+
+// Attach scroll event listener
+window.addEventListener("scroll", handleScroll);

@@ -29,7 +29,7 @@
 
   <body class="bg-beige font-inter">
     <!-- header start -->
-    <header class="relative z-30" id="header">
+    <header class="fixed top-0 left-0 w-full  transition-transform duration-500 ease-in-out z-30" id="header">
       <div class="w-full mx-auto px-4 lg:px-16">
         <div class="flex justify-between items-center py-6.5">
           <a href="./index.html">
@@ -209,7 +209,7 @@
           </div>
 
           <!-- Footer at bottom left -->
-          <div class="pt-10">
+          <div class="pt-10 px-8 lg:px-20">
             <ul class="space-y-2 text-left">
               <li>
                 <a
@@ -235,7 +235,7 @@
       <!-- hero start -->
       <section class="lg:px-8" id="hero">
         <div
-          class="relative h-screen overflow-hidden -mt-36 lg:rounded-b-[26px]"
+          class="relative h-screen overflow-hidden -mt-8  lg:rounded-b-[26px]"
         >
           <video
             autoplay
@@ -459,23 +459,23 @@
                 >
                   <div class="flex lg:flex-row justify-between space-x-5">
                     <button
-                      class="border-[1px] border-beige rounded-full text-black font-normal italic bg-transparent z-10"
+                      class="border-[1px] border-beige rounded-full text-black font-normal italic bg-transparent z-10 animate-button animate-button-1"
                     >
                       Care
                     </button>
                     <div
-                      class="hidden lg:block w-full h-[1px] bg-black my-auto"
+                      class="hidden lg:block w-full h-[1px] bg-black my-auto animate-line animate-line-1"
                     ></div>
                     <button
-                      class="border-[1px] border-transparent rounded-full text-black font-normal italic bg-transparent z-10"
+                      class="border-[1px] border-transparent rounded-full text-black font-normal italic bg-transparent z-10 animate-button animate-button-2"
                     >
                       Relationship
                     </button>
                     <div
-                      class="hidden lg:block w-full h-[1px] bg-black my-auto"
+                      class="hidden lg:block w-full h-[1px] bg-black my-auto animate-line animate-line-2"
                     ></div>
                     <button
-                      class="border-[1px] border-black rounded-full py-4.5 px-5 xl:py-6 xl:px-10 2xl:py-8 2xl:px-12 text-black font-normal italic bg-transparent z-10"
+                      class="border-[1px] border-black rounded-full py-4.5 px-5 xl:py-6 xl:px-10 2xl:py-8 2xl:px-12 text-black font-normal italic bg-transparent z-10 animate-button animate-button-3"
                     >
                       Commitment
                     </button>

@@ -181,12 +181,12 @@ body.menu-open {
 .faq-default {
   padding: 40px 50px;
   border-radius: 0px;
-  border-bottom: 1px solid #ffc5af;
 }
 .faq-default:last-child {
   padding: 40px 50px;
-  border-bottom: 1px solid transparent;
+
 }
+
 .faq-active {
   padding: 40px 50px;
   background-color: white;
