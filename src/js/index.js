@@ -602,6 +602,7 @@ gsap.utils.toArray(".hero-line-right").forEach((line) => {
 });
 
 // JavaScript for smooth header visibility on scroll
+// Declare variables once
 let prevScrollpos = window.pageYOffset;
 const header = document.getElementById("header");
 
@@ -611,16 +612,18 @@ header.classList.remove("blur-bg");
 
 function handleScroll() {
   const currentScrollPos = window.pageYOffset;
+  const isMobile = window.innerWidth < 768; // Mobile breakpoint at 768px
+  const blurThreshold = isMobile ? 200 : 400; // 200px for mobile, 400px for desktop
 
   // Show header when scrolling up or at the very top
-  if (prevScrollpos >= currentScrollPos) {
+  if (prevScrollpos >= currentScrollPos || currentScrollPos <= 0) {
     header.style.top = "0";
   } else {
     header.style.top = "-120px";
   }
 
-  // Add/remove blur after scrollY > 400
-  if (currentScrollPos > 400) {
+  // Add/remove blur based on dynamic threshold
+  if (currentScrollPos > blurThreshold) {
     header.classList.add("blur-bg");
   } else {
     header.classList.remove("blur-bg");
@@ -629,9 +632,19 @@ function handleScroll() {
   prevScrollpos = currentScrollPos;
 }
 
-// Throttle scroll event
-let scrollTimeout;
+// Throttle scroll event using requestAnimationFrame for smoother updates
+let isScrolling = false;
 window.onscroll = function () {
-  clearTimeout(scrollTimeout);
-  scrollTimeout = setTimeout(handleScroll, 16); // ~60fps
+  if (!isScrolling) {
+    isScrolling = true;
+    requestAnimationFrame(() => {
+      handleScroll();
+      isScrolling = false;
+    });
+  }
 };
+
+// Handle window resize to update blur effect
+window.addEventListener("resize", () => {
+  handleScroll(); // Re-run scroll handler to update blur based on new width
+});
