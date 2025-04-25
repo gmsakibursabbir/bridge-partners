@@ -602,37 +602,14 @@ gsap.utils.toArray(".hero-line-right").forEach((line) => {
 });
 
 // JavaScript for smooth header visibility on scroll
-const header = document.getElementById("header");
-let lastScrollTop = 0;
+window.onscroll = function () {
+  const header = document.getElementById("header");
 
-// Debounce function to limit scroll event frequency
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-// Scroll handler
-const handleScroll = debounce(() => {
-  const currentScroll =
-    window.pageYOffset || document.documentElement.scrollTop;
-
-  if (currentScroll > lastScrollTop && currentScroll > 20) {
-    // Scrolling down and past 20px
-    header.classList.add("-translate-y-full");
-  } else if (currentScroll === 0) {
-    // Exactly at the top (scroll position 0)
-    header.classList.remove("-translate-y-full");
+  if (window.pageYOffset === 0) {
+    header.classList.remove("hide");
+    header.classList.add("show");
+  } else {
+    header.classList.remove("show");
+    header.classList.add("hide");
   }
-
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-}, 20);
-
-// Attach scroll event listener
-window.addEventListener("scroll", handleScroll);
+};

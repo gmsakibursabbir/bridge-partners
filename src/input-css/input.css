@@ -184,7 +184,6 @@ body.menu-open {
 }
 .faq-default:last-child {
   padding: 40px 50px;
-
 }
 
 .faq-active {
@@ -360,4 +359,21 @@ html {
 
 .faq-arrow.rotate {
   transform: rotate(180deg);
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+#header.show {
+  top: 0;
+  transition: top 0.6s ease-in;
+}
+
+#header.hide {
+  top: -100px;
+  transition: top 0.2s ease-out;
 }
