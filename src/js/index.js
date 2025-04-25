@@ -602,14 +602,25 @@ gsap.utils.toArray(".hero-line-right").forEach((line) => {
 });
 
 // JavaScript for smooth header visibility on scroll
-window.onscroll = function () {
-  const header = document.getElementById("header");
+let prevScrollpos = window.pageYOffset;
+const header = document.getElementById("header");
 
-  if (window.pageYOffset === 0) {
-    header.classList.remove("hide");
-    header.classList.add("show");
+window.onscroll = function () {
+  const currentScrollPos = window.pageYOffset;
+
+  // Header show/hide on scroll direction
+  if (prevScrollpos > currentScrollPos) {
+    header.style.top = "0";
   } else {
-    header.classList.remove("show");
-    header.classList.add("hide");
+    header.style.top = "-120px";
   }
+
+  // Add blur only after scrollY > 400
+  if (currentScrollPos > 400) {
+    header.classList.add("blur-bg");
+  } else {
+    header.classList.remove("blur-bg");
+  }
+
+  prevScrollpos = currentScrollPos;
 };

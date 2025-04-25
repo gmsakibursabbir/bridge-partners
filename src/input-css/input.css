@@ -366,14 +366,12 @@ html {
   top: 0;
   width: 100%;
   z-index: 999;
+  transition: top 0.3s ease-in-out, backdrop-filter 0.4s ease,
+    background-color 0.4s ease;
 }
 
-#header.show {
-  top: 0;
-  transition: top 0.6s ease-in;
-}
-
-#header.hide {
-  top: -100px;
-  transition: top 0.2s ease-out;
+.blur-bg {
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  background-color: rgba(117, 117, 117, 0.6);
 }
