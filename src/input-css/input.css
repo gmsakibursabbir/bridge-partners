@@ -188,7 +188,9 @@ body.menu-open {
 .faq-default:last-child {
   padding: 40px 50px;
 }
-
+.collapse-title {
+  padding-inline-end: 16px;
+}
 .faq-active {
   padding: 40px 50px;
   background-color: white;
@@ -205,6 +207,7 @@ body.menu-open {
     padding: 32px 0px;
     border-radius: 0px;
   }
+
   .faq-default:last-child {
     padding: 32px 0px;
   }
