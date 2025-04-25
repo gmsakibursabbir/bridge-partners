@@ -605,17 +605,21 @@ gsap.utils.toArray(".hero-line-right").forEach((line) => {
 let prevScrollpos = window.pageYOffset;
 const header = document.getElementById("header");
 
-window.onscroll = function () {
+// Initialize header state
+header.style.top = "0";
+header.classList.remove("blur-bg");
+
+function handleScroll() {
   const currentScrollPos = window.pageYOffset;
 
-  // Header show/hide on scroll direction
-  if (prevScrollpos > currentScrollPos) {
+  // Show header when scrolling up or at the very top
+  if (prevScrollpos >= currentScrollPos) {
     header.style.top = "0";
   } else {
     header.style.top = "-120px";
   }
 
-  // Add blur only after scrollY > 400
+  // Add/remove blur after scrollY > 400
   if (currentScrollPos > 400) {
     header.classList.add("blur-bg");
   } else {
@@ -623,4 +627,11 @@ window.onscroll = function () {
   }
 
   prevScrollpos = currentScrollPos;
+}
+
+// Throttle scroll event
+let scrollTimeout;
+window.onscroll = function () {
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(handleScroll, 16); // ~60fps
 };
